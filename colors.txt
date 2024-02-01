@@ -1,0 +1,4 @@
+#12372A - dark green
+#436850 - lighter green
+#ADBC9F - more lighter green
+#FBFADA - whitegreen

@@ -1,0 +1,28 @@
+:root {
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+}
+
+.header {
+    width: 50%;
+    height: auto;
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-around;
+}
+
+h3 a{
+    color: var(--moreLighterGreen);
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+h3 a:hover{
+    color: var(--whiteGreen);
+}
