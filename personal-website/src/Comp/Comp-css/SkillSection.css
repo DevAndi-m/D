@@ -1,0 +1,94 @@
+:root {
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+}
+
+.skillsection {
+    text-align: center;
+
+    background-color: var(--moreLighterGreen);
+    font: var(--attColor);
+}
+
+.skillsection h1 {
+    color: var(--darkGreen);
+    margin: 0;
+    padding: 0.5em 0 1em 0;
+}
+
+.skillList {
+    margin: auto;
+    width: 100%
+}
+
+.skillEntry {
+    width: 80%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: auto;
+    padding: 30px 40px;
+    border-radius: 60px;
+
+    background: linear-gradient(45deg, var(--darkGreen), var(--darkestGreen));
+}
+
+.skillEntry img{
+    width: fit-content;
+}
+
+.skillInfo {
+    width: 80%;
+}
+
+.skillInfo p {
+    font-size: 30px;
+    word-wrap: break-word;
+    text-align: start;
+    color: var(--moreLighterGreen);
+}
+
+.skillInfo h2 {
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    color: var(--moreLighterGreen);
+}
+
+.skillStats {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+    gap: 20px;
+}
+
+/* Skill Bar */
+
+.skillBar {
+    width: 80%;
+    height: 20px;
+    background-color: var(--darkestGreen);
+    border-radius: 60px;
+    
+}
+
+.skillBar div {
+    height: 100%;
+    width: 50%;
+    background-color: var(--attColor);
+    border-radius: 60px;
+}
+
+.skillStats p {
+    width: 20%;
+}
+
+/* SkillBar */

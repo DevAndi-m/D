@@ -12,12 +12,9 @@
     align-items: center;
     width: 100%;
     justify-content: space-around;
-    margin: auto;
-    padding-top: 10vh ;
+    padding: 10% 0;
 
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
+    background: linear-gradient(180deg, var(--darkestGreen), var(--darkGreen));
 }
 
 .intro {

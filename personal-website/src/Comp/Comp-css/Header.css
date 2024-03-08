@@ -8,10 +8,14 @@
 }
 
 .header {
-    width: 50%;
+    background-color: var(--darkestGreen);
+}
+
+.linkContainer {
+    width: 30%;
     height: auto;
     margin: auto;
-
+    
     display: flex;
 
     justify-content: space-around;
