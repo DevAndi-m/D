@@ -5,19 +5,21 @@
     --moreLighterGreen: #ADBC9F;
     --whiteGreen: #FBFADA;
     --attColor: #e06303;
+    --altAttColor: #df7625;
 }
 
 .skillsection {
     text-align: center;
-
-    background-color: var(--moreLighterGreen);
     font: var(--attColor);
 }
 
 .skillsection h1 {
-    color: var(--darkGreen);
+    background: -webkit-linear-gradient(45deg,var(--darkGreen),var(--darkGreen), var(--darkestGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin: 0;
-    padding: 0.5em 0 1em 0;
+    padding: 1em 0 1em 0;
+    font-size: 6em;
 }
 
 .skillList {
@@ -32,11 +34,20 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
-    margin: auto;
+    margin: 20px auto;
     padding: 30px 40px;
     border-radius: 60px;
 
     background: linear-gradient(45deg, var(--darkGreen), var(--darkestGreen));
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s;
+}
+
+.showedEntry {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skillEntry img{
@@ -77,14 +88,19 @@
     height: 20px;
     background-color: var(--darkestGreen);
     border-radius: 60px;
-    
 }
 
-.skillBar div {
+.hiddenBar {
     height: 100%;
-    width: 50%;
-    background-color: var(--attColor);
+    width: 0;
+    background: linear-gradient(45deg,var(--attColor), var(--altAttColor));
     border-radius: 60px;
+
+    transition: all 0.3s;
+}
+
+.visibleBar {
+    width: 50%;
 }
 
 .skillStats p {
