@@ -19,7 +19,7 @@ const barObserver = new IntersectionObserver((entries) => {
         if(entry.isIntersecting) {
             entry.target.classList.add('visibleBar');
         } else {
-            entry.target.classList.remove('visibleBar')
+            entry.target.classList.remove('visibleBar');
         }
     });
 });
