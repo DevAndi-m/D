@@ -2,14 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Comp/Header';
 import Section from './Comp/Section';
-import SkillSection from './Comp/SkillSection';
+import SkillExpSection from './Comp/SkillExpSection';
 
 function App() {
   return (
     <div className="App">
         <Header />
         <Section />
-        <SkillSection />
+        <SkillExpSection />
     </div>
   );
 }

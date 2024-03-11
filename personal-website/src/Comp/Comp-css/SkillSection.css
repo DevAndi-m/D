@@ -13,7 +13,7 @@
     font: var(--attColor);
 }
 
-.skillsection h1 {
+.psL {
     background: -webkit-linear-gradient(45deg,var(--darkGreen),var(--darkGreen), var(--darkestGreen));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -93,7 +93,7 @@
 .hiddenBar {
     height: 100%;
     width: 0;
-    background: linear-gradient(45deg,var(--attColor), var(--altAttColor));
+    background: linear-gradient(45deg, var(--attColor), var(--altAttColor));
     border-radius: 60px;
 
     transition: all 0.3s;
