@@ -9,8 +9,11 @@
 }
 
 .skillsection {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     font: var(--attColor);
+    gap: 5em;
 }
 
 .psL {
@@ -96,7 +99,7 @@
     background: linear-gradient(45deg, var(--attColor), var(--altAttColor));
     border-radius: 60px;
 
-    transition: all 0.3s;
+    transition: all 0.5s ease-out;
 }
 
 .visibleBar {

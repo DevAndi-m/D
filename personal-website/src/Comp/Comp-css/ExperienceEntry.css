@@ -1,12 +1,18 @@
 :root {
+    --blackGreen: #040e0a;
     --darkestGreen: #0b241b;
     --darkGreen: #12372A;
     --lighterGreen: #436850;
     --moreLighterGreen: #ADBC9F;
     --whiteGreen: #FBFADA;
     --attColor: #e06303;
+    --altAttColor: #df7625;
 
     --gradientBoxes: linear-gradient(-45deg, var(--moreLighterGreen), var(--whiteGreen));
+}
+
+.bigParent {
+    padding: 10em 0;
 }
 
 .elT {
@@ -16,11 +22,40 @@
     margin: 0;
     padding: 1em 0 1em 0;
     font-size: 6em;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: transform 0.5s, opacity 1s ease-out;
+}
+
+.elTVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.expTitle {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center ;
+    gap: 40px;
+
+    margin-bottom: 5em;
 }
 
 .bigparentHOne{
-    font-size: 3em;
+    font-size: 4em;
     color: var(--whiteGreen);
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s;
+}
+
+.bigparentHOneVisible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 200ms;
 }
 
 .experience-parent {
@@ -35,7 +70,15 @@
 /* IMAGE */
 
 .exp-image{
-    width: 25%;
+    width: 15%;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: transform 0.5s, opacity 1s ease-out;
+}
+
+.exp-imageVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .exp-image img {
@@ -49,7 +92,7 @@
 }
 
 .empDesc{
-    display: none;
+    display: flex;
     width: 100%;
     color: var(--whiteGreen);
     font-size: 18px;
@@ -63,6 +106,7 @@
 }
 
 .empDandA {
+    display: none;
     width: 80%;
     margin: auto;
 }
@@ -117,7 +161,31 @@
     flex-direction: column;
 }
 
-.exp-btn button {
+.expMainBlock {
+    margin-top: 4em;
+    background: linear-gradient(45deg ,var(--blackGreen), var(--darkestGreen));
+}
+
+.exp-buttons {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s, opacity 1s ease-out;
+}
+
+.exp-buttonsVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.exp-buttons:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.exp-buttons:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.exp-buttons {
     font-size: 1.5em;
     font-weight: bold;
     color: var(--darkGreen);
@@ -131,7 +199,16 @@
     margin-top: 15px;
 }
 
-.expMainBlock {
-    margin-top: 4em;
-    background-color: var(--darkGreen);
+.current {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    height: 3em;    
+    border-radius: 60px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background: linear-gradient(45deg, var(--attColor), var(--altAttColor));
+    color: var(--darkestGreen);
 }

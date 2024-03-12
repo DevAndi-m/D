@@ -6,7 +6,6 @@ import ExperienceMain from './ExperienceMain';
 function SkillExpSection() {
   return (
     <div className='skillsection'>
-        <h1 className='psL'>My Personal Skills</h1>
         <SkillEntries />
         <ExperienceMain />
     </div>

@@ -1,18 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Comp-css/ExperienceEntry.css';
 import jcodersLogo from './images/JcodersLogo.png';
+import useReveal from './MyHooks/useReveal';
+import useRevealRec from './MyHooks/useRevealRec';
+import usePageSwitcher from './MyHooks/usePageSwitcher';
+import useminiPageSwitcher from './MyHooks/useminiPageSwitcher';
 
 function ExperienceEntry() {
+
+    // BUTONAT NTDJATHT
+    const [pageNum, setPageNum] = useState(1);
+
+    function pageSwitch(value) {
+        if(value !== pageNum) {
+            setPageNum(value);
+        }
+    }
+
+    //BUTONAT E VOGLA TE FAQJA 3
+    const [miniPageNum, setMiniPageNum] = useState(1);
+
+    function miniPageSwitch(miniValue) {
+        if(miniValue !== miniPageNum) {
+            setMiniPageNum(miniValue);
+        }
+    }
+
+    useReveal('.exp-image','exp-imageVisible');
+    useReveal('.bigparentHOne','bigparentHOneVisible');
+
+    useRevealRec('.exp-buttons', 'exp-buttonsVisible');
+
+    usePageSwitcher(pageNum);
+    useminiPageSwitcher(miniPageNum);
+
   return (
     <div className='bigParent'>
-        <h2 className='bigparentHOne'>Jcoders Academy</h2>
-        <div className='experience-parent'>
-        <div className='exp-image'>
-            <img src={jcodersLogo}></img>
+        <div className='expTitle'>
+            <div className='exp-image'>
+                <img src={jcodersLogo}></img>
+            </div>
+            <h2 className='bigparentHOne'>Jcoders Academy</h2>
         </div>
+        <div className='experience-parent'>
         <div className='exp-info'>
             <p className='empDesc'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the {pageNum}, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
             </p>
             <div className='empInfo'>
                 <div>
@@ -52,22 +85,28 @@ function ExperienceEntry() {
                     </div>
                 </div>
                 <div className='assigmentButtons'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
-                    </svg>
+                    <a onClick={() => miniPageSwitch(1)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot-one" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                        </svg>
+                    </a>
+                    <a onClick={() => miniPageSwitch(2)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot-two" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                        </svg>
+                    </a>
+                    <a onClick={() => miniPageSwitch(3)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot-three" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
         <div className='exp-btn'>
-            <button>My Experience</button>
-            <button>Employment Info</button>
-            <button>Duties & Assigments</button>
+            <button className='exp-buttons current' onClick={() => pageSwitch(1)}>My Experience</button>
+            <button className='exp-buttons' onClick={() => pageSwitch(2)}>Employment Info</button>
+            <button className='exp-buttons' onClick={() => pageSwitch(3)}>Duties & Assigments</button>
         </div>
     </div>
     </div>
