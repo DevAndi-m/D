@@ -202,7 +202,11 @@
 
 .expMainBlock {
     margin-top: 4em;
-    background: linear-gradient(45deg ,var(--blackGreen), var(--darkestGreen));
+    background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--darkGreen) 0%,
+    var(--blackGreen) 100%
+  );
 }
 
 .exp-buttons {
@@ -250,4 +254,26 @@
 
 .current:hover {
     transform: scale(1);
+}
+
+.pageOne {
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 0.5s, opacity 1s ease-out;
+}
+
+.pageTwo, .pageThree {
+    flex-direction: column;
+
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 0.5s, opacity 1s ease-out;
+}
+
+.pageOneVisible, .pageTwoVisible, .pageThreeVisible{
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -37,6 +37,10 @@ function ExperienceEntry() {
 
     useRevealRec('.assigmentButtons', 'assigmentButtonsVisible');
 
+    useRevealRec('.pageOne' , 'pageOneVisible');
+    useRevealRec('.pageTwo' , 'pageTwoVisible');
+    useRevealRec('.pageThree', 'pageThreeVisible');
+
     usePageSwitcher(pageNum);
     useminiPageSwitcher(miniPageNum);
 

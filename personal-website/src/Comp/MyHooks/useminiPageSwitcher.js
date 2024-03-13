@@ -16,7 +16,7 @@ function useminiPageSwitcher(miniValue) {
     const active = '#e06303'
     const inactive = '#FBFADA'
 
-    const open = 'inline';
+    const open = 'flex';
     const closed = 'none';
 
     var displayOne = document.getElementsByClassName(display.first);
