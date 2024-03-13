@@ -92,10 +92,13 @@
 }
 
 .empDesc{
-    display: flex;
     width: 100%;
     color: var(--whiteGreen);
     font-size: 18px;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s, opacity 1s ease-out;
 }
 
 .empInfo {
@@ -103,12 +106,42 @@
     justify-content: space-evenly;
     width: 80%;
     margin: auto;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s, opacity 1s ease-out;
 }
 
 .empDandA {
     display: none;
-    width: 80%;
-    margin: auto;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s, opacity 1s ease-out;
+}
+
+.empDandAVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.empDandA:nth-child(1) {
+    transition-delay: 1s;
+}
+
+.empDescVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.empInfoVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.assigTitle {
+    color: var(--whiteGreen);
 }
 
 .assig p{
@@ -124,23 +157,29 @@
     color: var(--whiteGreen);
 }
 
-.assig:nth-child(3) {
-    display: none;
-}
-
 .assigmentButtons {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: transform 0.5s, opacity 1s ease-out;
 }
 
-.assigmentButtons svg {
+.assigmentButtonsVisible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+.bi {
     color: var(--whiteGreen);
     transition: transform .3s, color 0.3s;
 }
 
-.assigmentButtons svg:hover {
+.bi:hover {
     transform:scale(2);
     color: var(--attColor);
 }
@@ -168,8 +207,8 @@
 
 .exp-buttons {
     opacity: 0;
-    transform: translateY(30px);
-    transition: transform 0.5s, opacity 1s ease-out;
+    transform: translateY(100px);
+    transition: transform 0.3s, opacity 0.5s ease-in;
 }
 
 .exp-buttonsVisible {
@@ -177,12 +216,8 @@
     transform: translateY(0);
 }
 
-.exp-buttons:nth-child(2) {
-    transition-delay: 100ms;
-}
-
-.exp-buttons:nth-child(3) {
-    transition-delay: 200ms;
+.exp-buttonsVisible:hover {
+    transform: scale(1.05);
 }
 
 .exp-buttons {
@@ -211,4 +246,8 @@
     margin-top: 15px;
     background: linear-gradient(45deg, var(--attColor), var(--altAttColor));
     color: var(--darkestGreen);
+}
+
+.current:hover {
+    transform: scale(1);
 }

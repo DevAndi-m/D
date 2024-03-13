@@ -31,6 +31,12 @@ function ExperienceEntry() {
 
     useRevealRec('.exp-buttons', 'exp-buttonsVisible');
 
+    useRevealRec('.empDesc' , 'empDescVisible');
+    useRevealRec('.empInfo' , 'empInfoVisible');
+    useRevealRec('.empDandA', 'empDandAVisible');
+
+    useRevealRec('.assigmentButtons', 'assigmentButtonsVisible');
+
     usePageSwitcher(pageNum);
     useminiPageSwitcher(miniPageNum);
 
@@ -71,17 +77,17 @@ function ExperienceEntry() {
             </div>
             <div className='empDandA'>
                 <div className='assigmentList'>
-                    <div className='assig'>
-                        <h2>Programming Instructior/Trainer</h2>
-                        <p>Instructed and mentored students aged 8-16 in foundational programming languages such as HTML, CSS, and JavaScript. Visualised different complex problems in order for them to have a perfect understanding of the subject.</p>
+                    <div className='pageOne'>
+                        <h2 className='assigment assigTitle'>Programming Instructior/Trainer</h2>
+                        <p className='assigment assigParagraph'>Instructed and mentored students aged 8-16 in foundational programming languages such as HTML, CSS, and JavaScript. Visualised different complex problems in order for them to have a perfect understanding of the subject.</p>
                     </div>
-                    <div className='assig'>
-                        <h2>TOT - Training Of Trainers</h2>
-                        <p>Mentored and guided fellow novice instructors in effective teaching methodologies and programming concepts. Provided ongoing support to fellow instructors, addressing coding challenges, debugging issues, and encouragment in order for them to effectively teach programming concepts to the students.</p>
+                    <div className='pageTwo'>
+                        <h2 className='assigment assigTitle'>TOT - Training Of Trainers</h2>
+                        <p className='assigment assigParagraph'>Mentored and guided fellow novice instructors in effective teaching methodologies and programming concepts. Provided ongoing support to fellow instructors, addressing coding challenges, debugging issues, and encouragment in order for them to effectively teach programming concepts to the students.</p>
                     </div>
-                    <div className='assig'>
-                        <h2>Creating and Modifying Curriculums</h2>
-                        <p>Adapted and personalized curriculum content to meet the diverse learning needs of students, promoting an inclusive and accessible approach to programming education and at the same time identifying areas for improvement and innovation, actively participating in the evolution of course materials to stay at the ready of industry trends and educational best practices.</p>
+                    <div className='pageThree'>
+                        <h2 className='assigment assigTitle'>Creating and Modifying Curriculums</h2>
+                        <p className='assigment assigParagraph'>Adapted and personalized curriculum content to meet the diverse learning needs of students, promoting an inclusive and accessible approach to programming education and at the same time identifying areas for improvement and innovation, actively participating in the evolution of course materials to stay at the ready of industry trends and educational best practices.</p>
                     </div>
                 </div>
                 <div className='assigmentButtons'>
@@ -104,9 +110,9 @@ function ExperienceEntry() {
             </div>
         </div>
         <div className='exp-btn'>
-            <button className='exp-buttons current' onClick={() => pageSwitch(1)}>My Experience</button>
-            <button className='exp-buttons' onClick={() => pageSwitch(2)}>Employment Info</button>
-            <button className='exp-buttons' onClick={() => pageSwitch(3)}>Duties & Assigments</button>
+            <button className='exp-buttons btO current' onClick={() => pageSwitch(1)}>My Experience</button>
+            <button className='exp-buttons btT' onClick={() => pageSwitch(2)}>Employment Info</button>
+            <button className='exp-buttons btTh' onClick={() => pageSwitch(3)}>Duties & Assigments</button>
         </div>
     </div>
     </div>
