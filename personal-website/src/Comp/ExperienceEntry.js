@@ -29,11 +29,11 @@ function ExperienceEntry() {
     useReveal('.exp-image','exp-imageVisible');
     useReveal('.bigparentHOne','bigparentHOneVisible');
 
-    useRevealRec('.exp-buttons', 'exp-buttonsVisible');
+    useReveal('.exp-buttons', 'exp-buttonsVisible');
 
     useRevealRec('.empDesc' , 'empDescVisible');
     useRevealRec('.empInfo' , 'empInfoVisible');
-    useRevealRec('.empDandA', 'empDandAVisible');
+    useRevealRec('.empDandA' , 'empDandAVisible');
 
     useRevealRec('.assigmentButtons', 'assigmentButtonsVisible');
 

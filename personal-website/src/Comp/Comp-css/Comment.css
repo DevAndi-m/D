@@ -1,0 +1,120 @@
+:root {
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+    --altAttColor: #df7625;
+}
+
+.cHeaderParent {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--whiteGreen) 0%,
+    var(--moreLighterGreen) 100%
+  );
+}
+
+.cHolder {
+    display: grid;
+    gap: 3rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 36%;
+    align-items: center;
+    
+    overflow-x: scroll;
+}
+
+.commentParent {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.userInfo {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    gap: 20px;
+}
+
+.propic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    background: url('../images/smiling-man_1098-15443.jpg') center/cover; 
+}
+
+.nameRel {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.nameText {
+    font-size: 23px;
+    color: var(--darkestGreen);
+}
+
+.relationTo {
+    font-size: 15px;
+    color: var(--lighterGreen);
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 5px;
+}
+
+.barrating {
+    height: 5px;
+    width: 8em;
+
+    background-color: var(--moreLighterGreen);
+    border-radius: 60px;
+}
+
+.trueRating {
+    height: 100%;
+    width: 80%;
+
+    background-color: var(--attColor);
+    border: none;
+    overflow: hidden;
+    border-radius: 60px;
+}
+
+.userMessage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+}
+
+.textField, .pubDate {
+    color: var(--darkGreen);
+}
+
+.textField {
+    text-align: justify;
+}
+
+.andiText {
+    margin-top: 30px;
+    font-size: 8px;
+    text-align: center;
+    color: var(--lighterGreen);
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import './Comp-css/SCSection.modules.css';
 import Section from './Section';
+import CommentMain from './CommentMain';
 
 export default function StrengthCapSection() {
 
@@ -11,7 +12,9 @@ export default function StrengthCapSection() {
     <div className='background'>
        <Parallax pages={6}>
         <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
-          <p className='scrollText'>So basically</p>
+          <div className='headerCont'>
+            <h1 className='headerText'>Let's take a look at what others think...</h1>
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>

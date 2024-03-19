@@ -1,0 +1,68 @@
+:root {
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+    --altAttColor: #df7625;
+}
+
+.dataMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.avr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.bi-star-fill {
+    color: var(--darkGreen);
+}
+
+.avgNum {
+    color: var(--darkGreen);
+}
+
+.strContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.noRatings {
+    width: 80px;
+    text-align: end;
+
+    color: var(--darkGreen);
+}
+
+.con {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sholder {
+    display: flex;
+    width: 5rem;
+}
+
+.bar {
+    height: 8px;
+    width: 200px;
+    background-color: var(--moreLighterGreen);
+    border-radius: 12px;
+}
+
+
+

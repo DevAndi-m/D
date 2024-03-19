@@ -1,12 +1,34 @@
+:root {
+  --darkestGreen: #0b241b;
+  --darkGreen: #12372A;
+  --lighterGreen: #436850;
+  --moreLighterGreen: #ADBC9F;
+  --whiteGreen: #FBFADA;
+  --attColor: #e06303;
+  --altAttColor: #df7625;
+}
+
 .background {
-    background: linear-gradient(#e66465, #9198e5);
+    background-image: radial-gradient(
+      farthest-corner at 40px 40px,
+      var(--whiteGreen) 0%,
+      var(--moreLighterGreen) 100%
+    );
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     height: 100vh;
+
+    overflow: hidden;
   }
   
+  .headerText {
+    background: -webkit-linear-gradient(45deg,var(--lighterGreen), var(--darkGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .scrollText {
     font-size: 1.5rem;
   }

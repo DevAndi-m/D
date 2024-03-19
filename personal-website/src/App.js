@@ -3,14 +3,14 @@ import Header from './Comp/Header';
 import Section from './Comp/Section';
 import SkillExpSection from './Comp/SkillExpSection';
 import StrengthCapSection from './Comp/StrengthCapSection';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-
+import CommentMain from './Comp/CommentMain'
 function App() {
   return (
     <div className="App">
         <Header />
         <Section />
         <SkillExpSection />
+        <CommentMain />
         <StrengthCapSection />
     </div>
   );
