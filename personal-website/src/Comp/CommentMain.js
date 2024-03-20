@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentEntry from './CommentEntry.js';
 import CommentData from './CommentData.js';
+import CommentAdd from './CommentAdd.js';
 import './Comp-css/Comment.css';
 
 function CommentHeader() {
@@ -16,7 +17,10 @@ function CommentHeader() {
       </div>
       <div className='cData'>
         {/* info tbazuara nkomente for userat me i pa */}
-        <CommentData />
+        <div className='cDataHolder'>
+          <CommentData />
+          <CommentAdd />
+        </div>
         <p className='andiText'>Andi guarantees that only 2 comments are made by him, this unfortunately includes the comment by Elon Musk.</p>
       </div>
     </div>

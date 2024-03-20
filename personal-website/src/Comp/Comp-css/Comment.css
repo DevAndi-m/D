@@ -118,3 +118,8 @@
     text-align: center;
     color: var(--lighterGreen);
 }
+
+.cDataHolder {
+    display: flex;
+    justify-content: space-around;
+}

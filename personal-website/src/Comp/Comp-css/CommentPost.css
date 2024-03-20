@@ -1,0 +1,51 @@
+:root {
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+    --altAttColor: #df7625;
+}
+
+.formHolder {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.contDiv {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.contTitle {
+    font-size: 30px;
+    background: -webkit-linear-gradient(45deg,var(--darkGreen),var(--darkGreen), var(--darkestGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: bold;
+}
+
+.contPara {
+    color: var(--lighterGreen);
+    font-size: 15px;
+}
+
+.commentLogSign {
+    padding: 20px 40px;
+    border-radius: 60px;
+    border: none;
+    font-size: 18px;
+
+    background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--altAttColor) 0%,
+    var(--attColor) 100%
+  );
+}
+
