@@ -1,7 +1,11 @@
 import React from 'react'
 import './Comp-css/CommentPost.css';
+import useReveal from './MyHooks/useReveal';
 
 function CommentAdd() {
+ 
+  useReveal('.formHolder', 'formHolderVisible');
+
   return (
     <div className='formHolder'>
         <div className='contDiv'>

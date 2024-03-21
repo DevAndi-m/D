@@ -3,8 +3,12 @@ import CommentEntry from './CommentEntry.js';
 import CommentData from './CommentData.js';
 import CommentAdd from './CommentAdd.js';
 import './Comp-css/Comment.css';
+import useReveal from './MyHooks/useReveal.js';
 
 function CommentHeader() {
+
+  useReveal('.headerText', 'headerTextVisible');
+
   return (
     <div className='cHeaderParent'>
       <div className='cHolder'>

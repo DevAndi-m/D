@@ -14,6 +14,16 @@
     width: 50%;
     align-items: center;
     padding: 0 20px;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+    transition-delay: 900ms;
+}
+
+.formHolderVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contDiv {
@@ -41,11 +51,19 @@
     border-radius: 60px;
     border: none;
     font-size: 18px;
+    color: var(--whiteGreen);
 
     background-image: radial-gradient(
     farthest-corner at 40px 40px,
     var(--altAttColor) 0%,
     var(--attColor) 100%
   );
+
+    transition: all 300ms,;
+}
+
+.commentLogSign:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 

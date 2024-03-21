@@ -6,19 +6,21 @@
     --whiteGreen: #FBFADA;
     --attColor: #e06303;
     --altAttColor: #df7625;
+    --greyGreen: #274639;
 }
 
 .cHeaderParent {
-    padding: 3rem;
+    padding: 10em 3rem;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 5em;
 
     background-image: radial-gradient(
     farthest-corner at 40px 40px,
     var(--whiteGreen) 0%,
     var(--moreLighterGreen) 100%
   );
+
 }
 
 .cHolder {
@@ -27,15 +29,50 @@
     grid-auto-flow: column;
     grid-auto-columns: 36%;
     align-items: center;
+    padding: 50px 0;
     
     overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+}
+
+.headerText {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+    transition-delay: 300ms;
+
+    background: -webkit-linear-gradient(45deg,var(--greyGreen),var(--darkGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headerTextVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .commentParent {
     display: flex;
     flex-direction: column;
+    background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--greyGreen) 0%,
+    var(--darkestGreen) 100%
+  );
+    padding: 40px;
+    border-radius: 60px;
 
     gap: 20px;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+    transition-delay: 200ms;
+}
+
+.commentParentVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .userInfo {
@@ -62,12 +99,16 @@
 
 .nameText {
     font-size: 23px;
-    color: var(--darkestGreen);
+    color: var(--whiteGreen);
 }
 
 .relationTo {
     font-size: 15px;
-    color: var(--lighterGreen);
+    color: var(--moreLighterGreen);
+}
+
+.numrating {
+    color: var(--moreLighterGreen);
 }
 
 .rating {
@@ -82,7 +123,7 @@
     height: 5px;
     width: 8em;
 
-    background-color: var(--moreLighterGreen);
+    background-color: var(--greyGreen);
     border-radius: 60px;
 }
 
@@ -105,7 +146,7 @@
 }
 
 .textField, .pubDate {
-    color: var(--darkGreen);
+    color: var(--moreLighterGreen);
 }
 
 .textField {

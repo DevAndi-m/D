@@ -1,7 +1,10 @@
 import React from 'react'
 import './Comp-css/CommentData.css';
+import useReveal from './MyHooks/useReveal';
 
 export default function CommentData() {
+
+    useReveal('.dataMain', 'dataMainVisible');
 
     const bigStarSVG = (
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="bi bi-star-fill" viewBox="0 0 16 16">

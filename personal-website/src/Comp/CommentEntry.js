@@ -1,6 +1,10 @@
 import React from 'react'
+import useReveal from './MyHooks/useReveal'
 
 function CommentEntry() {
+
+    useReveal('.commentParent', 'commentParentVisible')
+
   return (
     <div className='commentParent'>
         <div className='userInfo'>
