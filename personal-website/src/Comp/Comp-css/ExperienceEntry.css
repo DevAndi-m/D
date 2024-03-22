@@ -174,12 +174,12 @@
     transition-delay: 500ms;
 }
 
-.bi {
+.dots {
     color: var(--whiteGreen);
     transition: transform .3s, color 0.3s;
 }
 
-.bi:hover {
+.dots:hover {
     transform:scale(2);
     color: var(--attColor);
 }

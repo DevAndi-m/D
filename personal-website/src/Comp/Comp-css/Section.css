@@ -78,11 +78,11 @@ p {
     color: var(--moreLighterGreen);
 }
 
-.svg a {
+.links {
     transition: transform 0.3s ease, color 0.3s;
 }
 
-.svg a:hover {
+.links:hover {
     color: var(--attColor);
     transform: scale(1.1);
 }

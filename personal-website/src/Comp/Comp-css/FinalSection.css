@@ -1,0 +1,126 @@
+:root {
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+    --altAttColor: #df7625;
+    --greyGreen: #274639;
+}
+
+.fsParent {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.fsTitle {
+    background: -webkit-linear-gradient(45deg,var(--greyGreen),var(--darkGreen), var(--darkestGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+}
+
+.partsContainer {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+/* imageLayer */
+
+.imagePart {
+
+}
+
+.noImage {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    margin: 10px;
+    height: 4em;
+    width: 30em;
+    border-radius: 20px;
+}
+
+.boxOne {
+    background-color: #9C70F0;
+    border: #8455AB solid 3px;
+}
+
+.boxTwo {
+    background-color: #84E88D;
+    border: #4FAB5E solid 3px;
+
+}
+
+.boxThree {
+    background-color: #F0846E;
+    border: #B36454 solid 3px;
+}
+
+
+/* END imageLayer */
+
+.selectorPart {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 5px;
+}
+
+.selBtn {
+    width: 96%;
+    border: var(--greyGreen) solid 3px;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--moreLighterGreen);
+
+    font-size: 30px;
+    color: #0b241b;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selBtn p, .bi-arrow-down-short {
+    background: -webkit-linear-gradient(45deg,var(--greyGreen), var(--darkGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bi-arrow-down-short{
+    color: var(--greyGreen);
+    display: flex;
+    justify-content: center;
+}
+
+.arrowOne, .arrowTwo, .arrowThree {
+    transition: transform 0.3s;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+.selOneBox {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.selOneAll, .selTwoAll, .selThreeAll {
+    border: var(--lighterGreen) solid 4px;
+    border-radius: 20px;
+    padding: 12px;
+    width: 100%; 
+    display: ;
+}
+

@@ -2,6 +2,7 @@ import React from 'react';
 import CommentEntry from './CommentEntry.js';
 import CommentData from './CommentData.js';
 import CommentAdd from './CommentAdd.js';
+import FinalisingSection from './FinalisingSection.js';
 import './Comp-css/Comment.css';
 import useReveal from './MyHooks/useReveal.js';
 
@@ -27,6 +28,7 @@ function CommentHeader() {
         </div>
         <p className='andiText'>Andi guarantees that only 2 comments are made by him, this unfortunately includes the comment by Elon Musk.</p>
       </div>
+      <FinalisingSection />
     </div>
   )
 }
