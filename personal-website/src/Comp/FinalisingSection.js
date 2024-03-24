@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Comp-css/FinalSection.css';
 import { switchStateOne, switchStateTwo, switchStateThree } from './MyHooks/SwitchStateFunctions';
 
@@ -13,6 +13,33 @@ export default function FinalisingSection() {
   const [pageOneStatus, setPageOneStatus] = useState(0);
   const [pageTwoStatus, setPageTwoStatus] = useState(0);
   const [pageThreeStatus, setPageThreeStatus] = useState(0);
+
+  useEffect(() => {
+    const el = document.querySelector('.selOneBox');
+    if (pageOneStatus === 1) {
+      el.classList.add('selOneBoxActive');
+    } else {
+      el.classList.remove('selOneBoxActive');
+    }
+  }, [pageOneStatus]);
+
+  useEffect(() => {
+    const el = document.querySelector('.selTwoBox');
+    if (pageTwoStatus === 1) {
+      el.classList.add('selTwoBoxActive');
+    } else {
+      el.classList.remove('selTwoBoxActive');
+    }
+  }, [pageTwoStatus]);
+
+  useEffect(() => {
+    const el = document.querySelector('.selThreeBox');
+    if (pageThreeStatus === 1) {
+      el.classList.add('selThreeBoxActive');
+    } else {
+      el.classList.remove('selThreeBoxActive');
+    }
+  }, [pageThreeStatus]);
 
   return (
     <div className='fsParent'>
@@ -32,32 +59,32 @@ export default function FinalisingSection() {
 
           <div className='selOneAll'>
             <div className='selBtn selectorOne' onClick={() => switchStateOne(pageOneStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
-              <p>About me {pageOneStatus}</p>
+              <p className='selTitle'>About me</p>
               <p className={`arrowOne ${pageOneStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
             </div>
             <div className='selOneBox'>
               <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
-              <button className='selOneBtn'>More About Me</button>
+              <button className='selectorBtn selOneBtn'>More About Me</button>
             </div>
           </div>
           <div className='selTwoAll'>
             <div className='selBtn selectorTwo' onClick={() => switchStateTwo(pageTwoStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
-              <p>My Work {pageTwoStatus}</p>
+              <p className='selTitle'>My Work</p>
               <p className={`arrowTwo ${pageTwoStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
             </div>
-            <div className='selOneBox'>
+            <div className='selTwoBox'>
               <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
-              <button className='selOneBtn'>More About Me</button>
+              <button className='selectorBtn selOneBtn'>More About Me</button>
             </div>
           </div>
           <div className='selThreeAll'>
             <div className='selBtn selectorThree' onClick={() => switchStateThree(pageThreeStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
-              <p className='arrowThree'>Documentation & Contact {pageThreeStatus}</p>
+              <p className='selTitle'>Documentation & Contact</p>
               <p className={`arrowThree ${pageThreeStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
             </div>
-            <div className='selOneBox'>
+            <div className='selThreeBox'>
               <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
-              <button className='selOneBtn'>More About Me</button>
+              <button className='selectorBtn selOneBtn'>More About Me</button>
             </div>
           </div>
         </div>

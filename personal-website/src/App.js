@@ -3,7 +3,7 @@ import Header from './Comp/Header';
 import Section from './Comp/Section';
 import SkillExpSection from './Comp/SkillExpSection';
 import CommentMain from './Comp/CommentMain'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import Footer from './Comp/Footer';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Section />
       <SkillExpSection />
       <CommentMain />
+      <Footer />
     </div>
   );
 }

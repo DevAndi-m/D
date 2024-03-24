@@ -5,7 +5,7 @@
     --moreLighterGreen: #ADBC9F;
     --whiteGreen: #FBFADA;
     --attColor: #e06303;
-    --altAttColor: #df7625;
+    --altAttColor: #d57f3c;
     --greyGreen: #274639;
 }
 
@@ -76,13 +76,11 @@
 
 .selBtn {
     width: 96%;
-    border: var(--greyGreen) solid 3px;
     padding: 10px;
     border-radius: 12px;
-    background: var(--moreLighterGreen);
 
     font-size: 30px;
-    color: #0b241b;
+    color: var(--whiteGreen);
 
     display: flex;
     justify-content: space-between;
@@ -90,13 +88,14 @@
 }
 
 .selBtn p, .bi-arrow-down-short {
-    background: -webkit-linear-gradient(45deg,var(--greyGreen), var(--darkGreen));
+    background: -webkit-linear-gradient(45deg,var(--whiteGreen), var(--moreLighterGreen));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    font-weight: bold;
 }
 
 .bi-arrow-down-short{
-    color: var(--greyGreen);
     display: flex;
     justify-content: center;
 }
@@ -109,18 +108,50 @@
     transform: rotate(180deg);
 }
 
-.selOneBox {
+.selOneBox, .selTwoBox, .selThreeBox {
+    display: flex;
+    max-height: 0px;
+    overflow: hidden;
     width: 100%;
     padding: 10px;
-    display: flex;
     flex-direction: column;
+    opacity: 0;
+    gap: 20px;
+    transition: max-height 0.6s, opacity 0.5s;
+}
+
+.selOneBoxActive, .selTwoBoxActive, .selThreeBoxActive {
+    max-height: 10.5rem;
+    opacity: 1;
+    transition: max-height 0.6s, opacity 0.5s;
 }
  
 .selOneAll, .selTwoAll, .selThreeAll {
-    border: var(--lighterGreen) solid 4px;
+    border: var(--greyGreen) solid 3px;
     border-radius: 20px;
     padding: 12px;
     width: 100%; 
-    display: ;
+    background: -webkit-linear-gradient(45deg,var(--greyGreen), var(--darkGreen), var(--darkestGreen));
 }
 
+.selOneTxt {
+    color: var(--moreLighterGreen);
+}
+
+.selectorBtn {
+    width: fit-content;
+    padding: 10px 40px;
+    margin: 10px;
+
+    background: -webkit-linear-gradient(45deg,var(--attColor), var(--altAttColor));
+    border: none;
+    border-radius: 12px;
+
+    color: var(--whiteGreen);
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.selectorBtn:hover {
+    transform: scale(1.05);
+}
