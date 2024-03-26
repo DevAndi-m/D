@@ -1,4 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import './Comp-css/Footer.css';
+import qrPlaceholder from './images/qrZero.png';
+import qrLinkedin from './images/qrLinkedin.png';
+import qrGithub from './images/qrGithub.png';
+import qrFacebook from './images/qrFacebook.png';
+import qrInstagram from './images/qrInstagram.png';
 
 const reactIcon = (
     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" viewBox="0 0 24 24">
@@ -6,10 +12,9 @@ const reactIcon = (
         <path d="M12.215 13.773a1.792 1.792 0 1 0-1.786-1.8v.006a1.787 1.787 0 0 0 1.786 1.794Z"/>
     </svg>
 )
-
 const nodeIcon = (
     <svg
-      fill="#000000"
+      fill="currentColor"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -32,25 +37,51 @@ const nodeIcon = (
       </g>
     </svg>
 )
-
 const mongo = (
-    <svg height="100" width="100" fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>mongodb</title> <path d="M15.821 23.185s0-10.361 0.344-10.36c0.266 0 0.612 13.365 0.612 13.365-0.476-0.056-0.956-2.199-0.956-3.005zM22.489 12.945c-0.919-4.016-2.932-7.469-5.708-10.134l-0.007-0.006c-0.338-0.516-0.647-1.108-0.895-1.732l-0.024-0.068c0.001 0.020 0.001 0.044 0.001 0.068 0 0.565-0.253 1.070-0.652 1.409l-0.003 0.002c-3.574 3.034-5.848 7.505-5.923 12.508l-0 0.013c-0.001 0.062-0.001 0.135-0.001 0.208 0 4.957 2.385 9.357 6.070 12.115l0.039 0.028 0.087 0.063q0.241 1.784 0.412 3.576h0.601c0.166-1.491 0.39-2.796 0.683-4.076l-0.046 0.239c0.396-0.275 0.742-0.56 1.065-0.869l-0.003 0.003c2.801-2.597 4.549-6.297 4.549-10.404 0-0.061-0-0.121-0.001-0.182l0 0.009c-0.003-0.981-0.092-1.94-0.261-2.871l0.015 0.099z"></path> </g></svg>
+    <svg height="100" width="100" fill="currentColor" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>mongodb</title> <path d="M15.821 23.185s0-10.361 0.344-10.36c0.266 0 0.612 13.365 0.612 13.365-0.476-0.056-0.956-2.199-0.956-3.005zM22.489 12.945c-0.919-4.016-2.932-7.469-5.708-10.134l-0.007-0.006c-0.338-0.516-0.647-1.108-0.895-1.732l-0.024-0.068c0.001 0.020 0.001 0.044 0.001 0.068 0 0.565-0.253 1.070-0.652 1.409l-0.003 0.002c-3.574 3.034-5.848 7.505-5.923 12.508l-0 0.013c-0.001 0.062-0.001 0.135-0.001 0.208 0 4.957 2.385 9.357 6.070 12.115l0.039 0.028 0.087 0.063q0.241 1.784 0.412 3.576h0.601c0.166-1.491 0.39-2.796 0.683-4.076l-0.046 0.239c0.396-0.275 0.742-0.56 1.065-0.869l-0.003 0.003c2.801-2.597 4.549-6.297 4.549-10.404 0-0.061-0-0.121-0.001-0.182l0 0.009c-0.003-0.981-0.092-1.94-0.261-2.871l0.015 0.099z"></path> </g></svg>
 )
 
-
 function Footer() {
+
+  const [imageNum, setImageNum] = useState(0);
+  const [image, setImage] = useState(qrPlaceholder);
+  const [qrState, setQrState] = useState('Hover on a link')
+
+  const whoIsHovered = (num) => {
+    setImageNum(num)
+  }
+
+  useEffect(()=> {
+    if(imageNum === 0) {
+      setImage(qrPlaceholder)
+      setQrState('Hover on a link')
+    } else if(imageNum === 1) {
+      setImage(qrLinkedin)
+      setQrState('LinkedIn')
+    } else if (imageNum === 2) {
+      setImage(qrGithub)
+      setQrState('Github')
+    } else if (imageNum === 3) {
+      setImage(qrFacebook)
+      setQrState('Facebook')  
+    } else if (imageNum === 4) {
+      setImage(qrInstagram)
+      setQrState('Instagram')
+    }
+  }, [imageNum, image])
+
   return (
     <div className='footerParent'>
       <div className='contOne'>
             <h2 className='abt'>Made with love, using:</h2>
             <div className='tech'>
-                <div className='react'>
+                <div className='icn react'>
                     {reactIcon}
                 </div>
-                <div className='node'>
+                <div className='icn node'>
                     {nodeIcon}
                 </div>
-                <div className='mongoDb'>
+                <div className='icn mongoDb'>
                     {mongo}
                 </div>
             </div>
@@ -58,20 +89,30 @@ function Footer() {
       <div className='contTwo'>
         <h2 className='abt'>Site links:</h2>
         <div className='link'>
-            <a className='lnk'>Home</a>
-            <a className='lnk'>About Me</a>
-            <a className='lnk'>My Work</a>
-            <a className='lnk'>Documentation & Contact</a>
-            <a className='lnk'>Login & Singup</a>
+          <ul className='linkList'>
+            <li><a className='lnk'>Home</a></li>
+            <li><a className='lnk'>About Me</a></li>
+            <li><a className='lnk'>My Work</a></li>
+            <li><a className='lnk'>Documentation & Contact</a></li>
+            <li><a className='lnk'>Login & Singup</a></li>
+          </ul>         
         </div>
       </div>
       <div className='contThree'>
         <h2 className='abt'>Contact & Info:</h2>
         <div className='clnk'>
-            <a className='lnk'>LinkedIn</a>
-            <a className='lnk'>GitHub</a>
-            <a className='lnk'>Facebook</a>
-            <a className='lnk'>Instagram</a>
+          <ul className='contLinks'>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(1)} onMouseLeave={() => setImageNum(0)}>LinkedIn</a></li>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(2)} onMouseLeave={() => setImageNum(0)}>GitHub</a></li>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(3)} onMouseLeave={() => setImageNum(0)}>Facebook</a></li>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(4)} onMouseLeave={() => setImageNum(0)}>Instagram</a></li>
+          </ul>
+          <div className='qrSec'>
+            <p className='qrTxt'>{qrState}</p>
+            <div className='qrHolder'>
+              <img src={image}></img>
+            </div>
+          </div>
         </div>
       </div>
     </div>
