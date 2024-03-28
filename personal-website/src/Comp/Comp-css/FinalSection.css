@@ -33,37 +33,8 @@
 /* imageLayer */
 
 .imagePart {
-
-}
-
-.noImage {
-    display: flex;
-    flex-direction: column;
-}
-
-.box {
-    margin: 10px;
-    height: 4em;
     width: 30em;
-    border-radius: 20px;
 }
-
-.boxOne {
-    background-color: #9C70F0;
-    border: #8455AB solid 3px;
-}
-
-.boxTwo {
-    background-color: #84E88D;
-    border: #4FAB5E solid 3px;
-
-}
-
-.boxThree {
-    background-color: #F0846E;
-    border: #B36454 solid 3px;
-}
-
 
 /* END imageLayer */
 
@@ -135,6 +106,7 @@
 }
 
 .selOneTxt {
+    width: 95%;
     color: var(--moreLighterGreen);
 }
 
@@ -154,4 +126,40 @@
 
 .selectorBtn:hover {
     transform: scale(1.05);
+}
+
+@media only screen and (max-width: 1620px) {
+    .fsTitle {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 1599px) {
+    .selOneTxt {
+        width: 95%;
+        font-size: 13.5px;
+    }
+
+    .imagePart {
+        width: 20em;
+    }
+
+    .selOneAll, .selTwoAll, .selThreeAll {
+        padding: 5px;
+    }
+
+    .selTitle {
+        font-size: 24px;
+    }
+
+    .bi-arrow-down-short {
+        height: 100%;
+        
+        display: flex;
+        text-align: center;
+    }
+
+    .selectorBtn {
+        font-size: 15px;
+    }
 }

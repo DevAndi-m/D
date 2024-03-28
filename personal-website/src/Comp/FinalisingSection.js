@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Comp-css/FinalSection.css';
 import { switchStateOne, switchStateTwo, switchStateThree } from './MyHooks/SwitchStateFunctions';
+import NyanCat from './images/NyanCat.gif';
 
 export default function FinalisingSection() {
 
   const arrow = (
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
     </svg>
   );
@@ -46,14 +47,7 @@ export default function FinalisingSection() {
       <h1 className='fsTitle'>Also check out:</h1>
       <div className='partsContainer'>
         <div className='imagePart'>
-          <div className='noImage'>
-            <div className='box boxOne'></div>
-            <div className='box boxTwo'></div>
-            <div className='box boxThree'></div>
-          </div>
-          <div className='aboutMeImage'></div>
-          <div className='myWorkImage'></div>
-          <div className='docContactIMage'></div>
+          <img src={NyanCat}></img>
         </div>
         <div className='selectorPart'>
 

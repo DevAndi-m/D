@@ -30,3 +30,9 @@ h3 a{
 h3 a:hover{
     color: var(--whiteGreen);
 }
+
+@media only screen and (max-width: 1620px) {
+    .linkContainer {
+        width: 40%;
+    }
+}

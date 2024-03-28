@@ -164,3 +164,49 @@
     display: flex;
     justify-content: space-around;
 }
+
+@media only screen and (max-width: 1810px) {
+    .headerText {
+        font-size: 3.9rem;
+    }
+}
+
+@media only screen and (max-width: 1620px) {
+    .headerText {
+        font-size: 3.5rem;
+    }
+    
+    .cHolder {
+        gap: 20px;
+    }
+
+    .propic {
+        width: 65px;
+        height: 65px;
+    }
+
+    .nameText {
+        font-size: 16px;
+    }
+
+    .relationTo {
+        font-size: 14px;
+    }
+
+    .numrating {
+        font-size: 13px;
+    }
+
+    .barrating {
+        height: 4px;
+    }
+
+    .textField {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .pubDate {
+        font-size: 13px;
+    }
+}

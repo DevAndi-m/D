@@ -17,7 +17,7 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.5s;
-    transition-delay: 800ms;
+    transition-delay: 200ms;
 }
 
 .dataMainVisible {
@@ -74,5 +74,14 @@
     border-radius: 12px;
 }
 
+@media only screen and (max-width: 1620px) {
+    .bar {
+        height: 6px;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    
+}
 
 

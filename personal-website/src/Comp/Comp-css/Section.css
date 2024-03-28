@@ -32,6 +32,10 @@
 
 h1 {
     font-size: 5em;
+}
+
+.ttle {
+    font-size: 5em;
     color: var(--whiteGreen);
 }
 
@@ -85,4 +89,45 @@ p {
 .links:hover {
     color: var(--attColor);
     transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1629px) {
+    .ttle {
+        font-size: 4rem;
+    }
+
+    .portrait {
+        width: 45vh;
+        height: 45vh;
+        background-color: var(--lighterGreen);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    
+        margin-right:15vw;
+    }
+
+    .portrait img {
+        margin-top: 90px;
+        max-width: 120%;
+        max-height: 120%;
+        width: auto; 
+        height: auto; 
+    }
+    
+    .social {
+        width: 80%;
+        gap: 30px;
+    }
+
+    .sectionParagraph {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 1380px) {
+
 }

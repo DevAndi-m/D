@@ -210,6 +210,20 @@
 }
 
 .exp-buttons {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--darkGreen);
+    background: var(--gradientBoxes);
+    width: 100%;
+    height: 3em;    
+    border-radius: 60px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.exp-buttons {
     opacity: 0;
     transform: translateY(100px);
     transition: transform 0.3s, opacity 0.5s ease-in;
@@ -222,20 +236,6 @@
 
 .exp-buttonsVisible:hover {
     transform: scale(1.05);
-}
-
-.exp-buttons {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--darkGreen);
-    background: var(--gradientBoxes);
-    width: 100%;
-    height: 3em;    
-    border-radius: 60px;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
 }
 
 .current {
@@ -276,4 +276,31 @@
 .pageOneVisible, .pageTwoVisible, .pageThreeVisible{
     opacity: 1;
     transform: translateY(0);
+}
+
+@media only screen and (max-width: 1620px) {
+    .elT {
+        margin-top: 3rem;
+        font-size: 4rem;
+    }
+
+    .bigparentHOne {
+        font-size: 2.5rem;
+    }
+
+    .exp-info p {
+        font-size: 14px;
+    }
+
+    .exp-info h2 {
+        font-size: 16px;
+    } 
+
+    .exp-btn {
+        width: 20%;
+    }
+
+    .exp-buttons {
+        font-size: 1.1em;
+    }
 }
