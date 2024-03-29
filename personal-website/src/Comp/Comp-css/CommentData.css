@@ -12,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 
     opacity: 0;
     transform: translateY(30px);
@@ -31,7 +30,7 @@
     justify-content: space-around;
     align-items: center;
     width: fit-content;
-    padding: 20px;
+    
     border-radius: 12px;
     height: fit-content;
 }
@@ -77,11 +76,19 @@
 @media only screen and (max-width: 1620px) {
     .bar {
         height: 6px;
+        width: 140px;
     }
 }
 
 @media only screen and (max-width: 1380px) {
     
+}
+
+@media only screen and (max-width: 1050px) {
+    .bar {
+        height: 8px;
+        width: 400px;
+    }
 }
 
 

@@ -9,9 +9,11 @@ import useReveal from './MyHooks/useReveal.js';
 function CommentHeader() {
 
   useReveal('.headerText', 'headerTextVisible');
+  useReveal('.headerTextMobile' , 'headerTextMobileVisible');
 
   return (
     <div className='cHeaderParent'>
+      <h1 className='headerTextMobile'>Let's take a look at what others think</h1>
       <div className='cHolder'>
         <h1 className='headerText'>Let's take a look at what others think</h1>
         {/* Ktu hin commentet */}

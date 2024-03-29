@@ -36,6 +36,7 @@
 }
 
 .headerText {
+    text-align: center;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.5s;
@@ -47,6 +48,24 @@
 }
 
 .headerTextVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.headerTextMobile {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+    transition-delay: 300ms;
+
+    background: -webkit-linear-gradient(45deg,var(--greyGreen),var(--darkGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: none 10px;
+}
+
+.headerTextMobileVisible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -209,4 +228,100 @@
     .pubDate {
         font-size: 13px;
     }
+
+    .cHeaderParent {
+        padding: 8em 3rem;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    .headerText {
+        font-size: 2.7rem;
+    }
+    
+    .cHolder {
+        gap: 2rem;
+        grid-auto-columns: 40%;
+    }
+
+    .commentParent {
+        padding: 20px 40px;
+        border-radius: 40px;
+    }
+    
+    .propic {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nameText {
+        font-size: 13px;
+    }
+
+    .relationTo {
+        font-size: 12px;
+    }
+
+    .numrating {
+        font-size: 13px;
+    }
+
+    .barrating {
+        height: 3px;
+        width: 5em;
+    }
+
+    .textField {
+        width: 110%;
+        font-size: 11px;
+    }
+
+    .pubDate {
+        font-size: 12px;
+    }
+
+    .rating {
+        gap: 3px;
+    }
+
+    .cHeaderParent {
+        padding: 5em 3rem;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .cHeaderParent {
+        gap: 30px;
+    }
+
+    .headerText {
+        display: none;
+    }
+    
+    .headerTextMobile {
+        display: inline;
+        font-size: 3em;
+        margin: auto;
+    }
+
+    .cHolder {
+        gap: 1rem;
+        grid-auto-columns: 56%;
+    }
+
+    .cDataHolder {
+        margin-top: 20px;
+        gap: 4em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .andiText {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    
 }

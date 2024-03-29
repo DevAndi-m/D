@@ -18,7 +18,7 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.5s;
-    transition-delay: 900ms;
+    transition-delay: 400ms;
 }
 
 .formHolderVisible {
@@ -79,5 +79,33 @@
     .commentLogSign {
         padding: 12px 30px;
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    .contTitle {
+        font-size: 20px;
+    }
+
+    .contPara {
+        font-size: 10px;
+    }
+
+    .formHolder {
+        padding: 0 10px;
+    }
+
+    .commentLogSign {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .formHolder {
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+        gap: 30px;
     }
 }

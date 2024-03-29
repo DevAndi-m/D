@@ -162,4 +162,37 @@
     .selectorBtn {
         font-size: 15px;
     }
+
+    .fsTitle {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    .imagePart {
+        width: 18em;
+    }
+    
+    .selOneTxt {
+        font-size: 12px;
+    }
+
+    .selTitle {
+        font-size: 20px;
+    }
+
+    .bi-arrow-down-short {
+        height: 100%;
+        
+        display: flex;
+        text-align: center;
+    }
+
+    .selOneBox, .selTwoBox, .selThreeBox {
+        gap: 10px;
+    }
+
+    .selectorBtn {
+        font-size: 13px;
+    }
 }

@@ -9,9 +9,9 @@ function Section() {
         <div className='intro'>
             <h1 className='ttle'>Hi, my name is <span>Andi</span></h1>
             <div className='social'>
-            <p className='sectionParagraph'>
-                I am a passionate, hard-working <AgeChecker /> year old programmer who loves building, designing and fixing software applications. I possess more experience in frontend development. Additionally, I am deeply passionate about tackling backend challenges.
-            </p>
+                <p className='sectionParagraph'>
+                    I am a passionate, hard-working <AgeChecker /> year old programmer who loves building, designing and fixing software applications. I possess more experience in frontend development. Additionally, I am deeply passionate about tackling backend challenges.
+                </p>
                 <div className='svg'>
                     {/* Linkedin */}
                     <a className='links'>

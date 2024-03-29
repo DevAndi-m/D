@@ -36,3 +36,9 @@ h3 a:hover{
         width: 40%;
     }
 }
+
+@media only screen and (max-width: 1050px) {
+    .linkContainer {
+        width: 80%;
+    }
+}

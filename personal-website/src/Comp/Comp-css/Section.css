@@ -91,7 +91,7 @@ p {
     transform: scale(1.1);
 }
 
-@media only screen and (max-width: 1629px) {
+@media only screen and (max-width: 1711px) {
     .ttle {
         font-size: 4rem;
     }
@@ -99,14 +99,7 @@ p {
     .portrait {
         width: 45vh;
         height: 45vh;
-        background-color: var(--lighterGreen);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    
-        margin-right:15vw;
+        margin-right:13vw;
     }
 
     .portrait img {
@@ -128,6 +121,91 @@ p {
 
 }
 
-@media only screen and (max-width: 1380px) {
+@media only screen and (max-width: 1400px) {
+    .ttle {
+        font-size: 4rem;
+    }
 
+    .portrait {
+        width: 40vh;
+        height: 40vh;
+        margin-right:13vw;
+    }
+
+    .portrait img {
+        margin-top: 90px;
+        max-width: 110%;
+        max-height: 110%;
+        width: auto; 
+        height: auto; 
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    .ttle {
+        font-size: 3.5rem;
+    }
+
+    .portrait {
+        width: 35vh;
+        height: 35vh;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .social {
+        flex-direction: column;
+    }
+
+    .svg {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .ttle {
+        font-size: 3rem;
+    }
+
+    .sectionParagraph {
+        font-size: 12px;
+    }
+
+    .portrait {
+        width: 30vh;
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .parent {
+        flex-direction: column-reverse;
+    }
+
+    .portrait {
+        margin: 0;
+
+        width: 40vh;
+        height: 40vh;
+    }
+
+    .intro {
+        margin: 0;
+        width: 70%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sectionParagraph {
+        font-size: 14px;
+    }
+
+    .svg {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+
+    
 }
