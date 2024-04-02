@@ -91,4 +91,24 @@
     }
 }
 
+@media only screen and (max-width: 840px) {
+    .bar {
+        height: 8px;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .bar {
+        height: 7px;
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .bar {
+        height: 7px;
+        width: 150px;
+    }
+}
 

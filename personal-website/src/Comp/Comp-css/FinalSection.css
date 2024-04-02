@@ -196,3 +196,54 @@
         font-size: 13px;
     }
 }
+
+@media only screen and (max-width: 840px) {
+    .imagePart {
+        width: 14em;
+    }
+    
+    .selOneTxt {
+        font-size: 10px;
+    }
+
+    .selTitle {
+        font-size: 15px;
+    }
+
+    .bi-arrow-down-short {
+        height: 100%;
+        
+        display: flex;
+        text-align: center;
+    }
+
+    .selOneBox, .selTwoBox, .selThreeBox {
+        gap: 10px;
+    }
+
+    .selectorBtn {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .imagePart {
+        width: 30%;
+    }
+    .selectorPart {
+        width: 60%;
+    }
+
+    .selOneTxt {
+        font-size: 12px;
+    }
+
+    .selTitle {
+        font-size: 18px;
+    }
+
+    .selectorBtn {
+        font-size: 13px;
+    }
+}
+

@@ -206,6 +206,28 @@ p {
 }
 
 @media only screen and (max-width: 840px) {
+    .intro {
+        gap: 20px;
+    }
+}
 
-    
+@media only screen and (max-width: 560px) {
+    .portrait {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .ttle {
+        font-size: 2.5rem;
+    }
+
+    .sectionParagraph {
+        font-size: 13px;
+        width: 90%;
+    }
+
+    .social {
+        justify-content: center;
+        align-items: center;
+    }
 }

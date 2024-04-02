@@ -213,3 +213,59 @@
         font-size: 3em;
     }
 }
+
+@media only screen and (max-width: 810px) {
+    .psL {
+        font-size: 2.7rem;
+    }
+
+    .skillEntry {
+        width: 75%;
+        gap: 30px;
+        border-radius: 30px;
+    }
+
+    .skillInfo h2 {
+        font-size: 1.4rem;
+    }
+
+    .skillInfo p {
+        font-size: 11px;
+    }
+
+    .skillEntry img{
+        width: 5rem;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .psL {
+        font-size: 2.5rem;
+    }
+
+    .skillEntry {
+        width: 80%;
+        border-radius: 25px;
+        padding: 20px 30px;
+    }
+
+    .skillInfo h2 {
+        font-size: 1.2rem;
+    }
+
+    .skillInfo p {
+        font-size: 10px;
+    }
+
+    .skillEntry img{
+        width: 4.5rem;
+    }
+
+    .skillBar {
+        height: 4px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+
+}

@@ -362,5 +362,69 @@
 }
 
 @media only screen and (max-width: 840px) {
+    .elT {
+        margin-top: 1rem;
+        font-size: 2.7rem;
+    }
+
+    .bigParent {
+        padding: 3em 0 8em 0;
+    }
+
+    .bigparentHOne {
+        font-size: 1.8em;
+    }
+
+    .expTitle {
+        margin-bottom: 1.5em;
+    }
+
+    .exp-info {
+        width: 100%;
+    }
+
+    .exp-btn {
+        width: 40%;
+        font-size: 15px;
+    }
+
+    .experience-parent {
+        flex-direction: column;
+        width: 80%;
+        gap: 40px;
+    }
+
+    .exp-info p {
+        font-size: 14px;
+    }
+
+    .exp-info h2 {
+        font-size: 15px;
+    } 
+
+    .exp-image {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .expTitle {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .empInfo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .exp-btn {
+        width: 40%;
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
 
 }

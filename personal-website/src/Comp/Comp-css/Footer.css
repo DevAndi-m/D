@@ -134,3 +134,55 @@ img {
         display: none;
     }
 }
+
+@media only screen and (max-width: 840px) {
+    .footerParent {
+        font-size: 12px;
+    }
+
+    .contLinks {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .linkList li {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .contOne, .contTwo, .contThree {
+        width: 100%;
+    }
+
+    .tech {
+        width: 50%;
+        margin: auto;
+    }
+
+    .footerParent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contLinks {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .linkList {
+        padding-left: 0;
+        width: 40%;
+        margin: auto;
+    }
+
+    .contLinks {
+        padding-left: 0;
+    }
+
+    .abt {
+        font-size: 2em;
+    }
+}

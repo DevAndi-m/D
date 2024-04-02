@@ -45,44 +45,44 @@ export default function FinalisingSection() {
   return (
     <div className='fsParent'>
       <h1 className='fsTitle'>Also check out:</h1>
-      <div className='partsContainer'>
-        <div className='imagePart'>
-          <img src={NyanCat}></img>
-        </div>
-        <div className='selectorPart'>
+        <div className='partsContainer'>
+          <div className='imagePart'>
+            <img src={NyanCat}></img>
+          </div>
+          <div className='selectorPart'>
 
-          <div className='selOneAll'>
-            <div className='selBtn selectorOne' onClick={() => switchStateOne(pageOneStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
-              <p className='selTitle'>About me</p>
-              <p className={`arrowOne ${pageOneStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
+            <div className='selOneAll'>
+              <div className='selBtn selectorOne' onClick={() => switchStateOne(pageOneStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
+                <p className='selTitle'>About me</p>
+                <p className={`arrowOne ${pageOneStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
+              </div>
+              <div className='selOneBox'>
+                <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
+                <button className='selectorBtn selOneBtn'>More About Me</button>
+              </div>
             </div>
-            <div className='selOneBox'>
-              <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
-              <button className='selectorBtn selOneBtn'>More About Me</button>
+            <div className='selTwoAll'>
+              <div className='selBtn selectorTwo' onClick={() => switchStateTwo(pageTwoStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
+                <p className='selTitle'>My Work</p>
+                <p className={`arrowTwo ${pageTwoStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
+              </div>
+              <div className='selTwoBox'>
+                <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
+                <button className='selectorBtn selOneBtn'>More About Me</button>
+              </div>
             </div>
-          </div>
-          <div className='selTwoAll'>
-            <div className='selBtn selectorTwo' onClick={() => switchStateTwo(pageTwoStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
-              <p className='selTitle'>My Work</p>
-              <p className={`arrowTwo ${pageTwoStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
-            </div>
-            <div className='selTwoBox'>
-              <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
-              <button className='selectorBtn selOneBtn'>More About Me</button>
-            </div>
-          </div>
-          <div className='selThreeAll'>
-            <div className='selBtn selectorThree' onClick={() => switchStateThree(pageThreeStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
-              <p className='selTitle'>Documentation & Contact</p>
-              <p className={`arrowThree ${pageThreeStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
-            </div>
-            <div className='selThreeBox'>
-              <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
-              <button className='selectorBtn selOneBtn'>More About Me</button>
+            <div className='selThreeAll'>
+              <div className='selBtn selectorThree' onClick={() => switchStateThree(pageThreeStatus, setPageOneStatus, setPageTwoStatus, setPageThreeStatus)}>
+                <p className='selTitle'>Documentation & Contact</p>
+                <p className={`arrowThree ${pageThreeStatus === 1 ? 'rotate180' : ''}`}>{arrow}</p>
+              </div>
+              <div className='selThreeBox'>
+                <p className='selOneTxt'>If you haven't already, I highly recommend checking out my "About Me" page. It's a glimpse into who I am beyond the surface. There, you'll find more than just a basic bio. It's a deeper dive into my world and about the things that shape me as an individual.</p>
+                <button className='selectorBtn selOneBtn'>More About Me</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   )
 }

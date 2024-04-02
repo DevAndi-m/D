@@ -109,3 +109,9 @@
         gap: 30px;
     }
 }
+
+@media only screen and (max-width: 840px) {
+    .formHolder {
+        width: 90%;
+    }
+}

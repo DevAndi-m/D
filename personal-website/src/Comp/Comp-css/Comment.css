@@ -290,7 +290,6 @@
 }
 
 @media only screen and (max-width: 1050px) {
-
     .cHeaderParent {
         gap: 30px;
     }
@@ -323,5 +322,19 @@
 }
 
 @media only screen and (max-width: 840px) {
+    .cHeaderParent {
+        gap: 10px;
+    }
     
+    .headerTextMobile {
+        font-size: 2.2em;
+    }
+
+    .cHolder {
+        grid-auto-columns: 75%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
 }
