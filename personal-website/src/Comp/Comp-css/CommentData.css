@@ -1,4 +1,4 @@
-:root {
+    :root {
     --darkestGreen: #0b241b;
     --darkGreen: #12372A;
     --lighterGreen: #436850;
@@ -109,6 +109,12 @@
     .bar {
         height: 7px;
         width: 150px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .bar {
+        display: none;
     }
 }
 

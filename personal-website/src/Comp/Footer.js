@@ -102,10 +102,10 @@ function Footer() {
         <h2 className='abt'>Contact & Info:</h2>
         <div className='clnk'>
           <ul className='contLinks'>
-            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(1)} onMouseLeave={() => setImageNum(0)}>LinkedIn</a></li>
-            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(2)} onMouseLeave={() => setImageNum(0)}>GitHub</a></li>
-            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(3)} onMouseLeave={() => setImageNum(0)}>Facebook</a></li>
-            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(4)} onMouseLeave={() => setImageNum(0)}>Instagram</a></li>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(1)} onMouseLeave={() => setImageNum(0)} href='https://www.linkedin.com/in/andi-morina-6742192b1/'>LinkedIn</a></li>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(2)} onMouseLeave={() => setImageNum(0)} href='https://github.com/DevAndi-m'>GitHub</a></li>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(3)} onMouseLeave={() => setImageNum(0)} href='https://www.facebook.com/andi.morina.9/'>Facebook</a></li>
+            <li><a className='lnkCon' onMouseOver={() => whoIsHovered(4)} onMouseLeave={() => setImageNum(0)} href='https://www.instagram.com/morina_andii/'>Instagram</a></li>
           </ul>
           <div className='qrSec'>
             <p className='qrTxt'>{qrState}</p>

@@ -115,3 +115,40 @@
         width: 90%;
     }
 }
+
+@media only screen and (max-width: 530px) {
+    .contTitle {
+        font-size: 17px;
+    }
+
+    .contPara {
+        font-size: 9px;
+    }
+
+    .commentLogSign {
+        padding: 9px 10px;
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 378px) {
+    .contTitle {
+        font-size: 15px;
+    }
+
+    .contPara {
+        font-size: 8px;
+    }
+
+    .formHolder {
+        justify-content: space-evenly;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .commentLogSign {
+        padding: 5px 8px;
+        font-size: 8px;
+    }
+}

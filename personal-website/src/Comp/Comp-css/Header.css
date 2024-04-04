@@ -78,7 +78,7 @@ h3 a:hover{
         display: inline;
         position: absolute;
         top: 30px;
-        right: 70px;
+        right: 50px;
     }
 
     .toggleOff {
@@ -123,12 +123,37 @@ h3 a:hover{
         gap: 50px;
     }
 
+    .navDots {
+        right: 30px;
+    }
+
+    .navReturn {
+        top: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .visibleLinkContainer {
+        gap: 40px;
+    }
+
     .navReturn {
         right: 50px;
+        top: 28px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .visibleLinkContainer, .hiddenLinkContainer, .toggleOff, .toggleOn {
+        font-size: 11px;
+    }
+
+    .navReturn {
+        top: 19px;
     }
 
     .navDots {
-        right: 20px;
+        top: 22px;
     }
 }
 

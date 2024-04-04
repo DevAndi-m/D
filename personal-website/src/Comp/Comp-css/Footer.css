@@ -78,6 +78,11 @@
 .lnkCon {
     color: var(--lighterGreen);
     transition: color 100ms;
+    text-decoration: none;
+}
+
+.linkCon:visited {
+    color: var(--darkGreen);
 }
 
 .lnkCon:hover {
@@ -184,5 +189,17 @@ img {
 
     .abt {
         font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .contOne {
+        width: 100%;
+    }
+
+    .tech {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
     }
 }

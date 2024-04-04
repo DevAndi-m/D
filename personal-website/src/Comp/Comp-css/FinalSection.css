@@ -247,3 +247,39 @@
     }
 }
 
+@media only screen and (max-width: 520px) {
+    .imagePart {
+        display: none;
+    }
+
+    .selectorPart {
+        width: 100%;
+    }
+
+    .fsTitle {
+        font-size: 2em;
+        margin: 1.5em 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+
+    .selectorPart {
+        width: 90%;
+        position: relative;
+        right: 8px;
+    }
+
+    .selOneTxt {
+        font-size: 11px;
+    }
+
+    .selTitle {
+        font-size: 19px;
+    }
+
+    .selectorBtn {
+        font-size: 10px;
+    }
+}
+

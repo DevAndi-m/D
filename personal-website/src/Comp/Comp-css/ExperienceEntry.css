@@ -201,7 +201,6 @@
 }
 
 .expMainBlock {
-    margin-top: 4em;
     background-image: radial-gradient(
     farthest-corner at 40px 40px,
     var(--darkGreen) 0%,
@@ -414,7 +413,6 @@
     }
 
     .empInfo {
-        display: flex;
         justify-content: space-between;
         width: 100%;
     }
@@ -426,5 +424,25 @@
 }
 
 @media only screen and (max-width: 490px) {
+    .elT {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
 
+    .expTitle {
+        font-size: 0.8rem;
+    }
+
+    .exp-info h2 {
+        font-size: 11px;
+    }
+
+    .exp-info p {
+        font-size: 10px;
+    }
+
+    .exp-btn {
+        width: 50%;
+        font-size: 11px;
+    }
 }

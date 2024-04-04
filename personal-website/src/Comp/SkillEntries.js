@@ -3,7 +3,7 @@ import SingleSkillEntry from './SingleSkillEntry';
 
 function SkillEntries() {
     return (
-        <div>
+        <div className='skillContainer'>
               <h1 className='psL'>My Personal Skills</h1>
             <SingleSkillEntry />
             <SingleSkillEntry />

@@ -335,6 +335,167 @@
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 636px) {
+    .headerTextMobile {
+        font-size: 2em;
+    }
+
+    .cHeaderParent {
+        padding: 3em 1rem;
+    }
+
+    .cHolder {
+        grid-auto-columns: 85%;
+        gap: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .cHeaderParent {
+        padding: 3em 1rem;
+    }
+
+    .headerTextMobile {
+        font-size: 1.5em;
+    }
+
+    .commentParent {
+        gap: 8px;
+        border-radius: 25px;
+    }
+
+    .cHeaderParent {
+        padding: 3em 2rem;
+    }
+
+    .propic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nameText {
+        font-size: 11px;
+    }
+
+    .relationTo {
+        font-size: 10px;
+    }
+
+    .numrating {
+        font-size: 10px;
+    }
+
+    .barrating {
+        height: 3px;
+        width: 3em;
+    }
+
+    .textField {
+        width: 120%;
+        font-size: 9px;
+    }
+
+    .pubDate {
+        font-size: 11px;
+    }
+
+    .rating {
+        gap: 2px;
+    }
+
+    .userMessage {
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    .headerTextMobile {
+        font-size: 1.1em;
+    }
+
+    .cHolder {
+        padding: 2em 0;
+    }   
 
 }
+
+@media only screen and (max-width: 391px) {
+    .propic {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .nameText {
+        font-size: 10px;
+    }
+    
+    .relationTo {
+        font-size: 7px;
+    }
+    
+    .numrating {
+        font-size: 8px;
+    }
+    
+    .barrating {
+        height: 2px;
+        width: 2.5em;
+    }
+    
+    .textField {
+        width: 130%;
+        font-size: 8px;
+    }
+    
+    .pubDate {
+        font-size: 10px;
+    }
+    
+    .rating {
+        gap: 4px;
+    }
+    
+    .userMessage {
+        gap: 10px;
+    }
+
+    .userInfo {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 348px) {
+    .propic {
+        width: 25px;
+        height: 26px;
+    }
+
+    .nameText {
+        font-size: 9px;
+    }
+
+    .relationTo {
+        font-size: 8px;
+    }
+
+    .barrating {
+        height: 2px;
+        width: 2em;
+    }
+
+    .numrating {
+        font-size: 6px;
+    } 
+
+    .textField {
+        width: 130%;
+        font-size: 8px;
+    }
+
+    .cHeaderParent {
+        padding: 3em 10px;
+    }
+}
+
+
+

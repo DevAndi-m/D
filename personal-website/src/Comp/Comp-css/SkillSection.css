@@ -13,7 +13,16 @@
     flex-direction: column;
     text-align: center;
     font: var(--attColor);
-    gap: 5em;
+}
+
+.skillContainer {
+    background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--whiteGreen) 0%,
+    var(--moreLighterGreen) 100%
+  );
+
+  padding-bottom: 6em;
 }
 
 .psL {
@@ -26,7 +35,6 @@
 }
 
 .skillList {
-    margin: auto;
     width: 100%;
 }
 
@@ -205,12 +213,12 @@
         margin-top: 0.5em;
     }
 
-    .skillsection {
-        gap: 1em;
-    }
-
     .psL {
         font-size: 3em;
+    }
+
+    .skillContainer{
+        padding-bottom: 3em;
     }
 }
 
@@ -267,5 +275,36 @@
 }
 
 @media only screen and (max-width: 490px) {
+    .psL {
+        padding: 20px 0 10px 0;
+        font-size: 2rem;
+    }
 
+    .skillEntry {
+        border-radius: 18px;
+        gap: 15px;
+        width: 75%;
+        margin: 10px auto;
+        padding: 10px 30px;
+    }
+
+    .skillEntry img{
+        width: 3.5rem;
+    }
+
+    .skillInfo {
+        gap: 0px;
+    }
+
+    .skillInfo h2 {
+        font-size: 1rem;
+    }
+
+    .skillInfo p {
+        font-size: 9px;
+    }
+
+    .skillStats {
+        margin-top: 2px;
+    }
 }
