@@ -5,6 +5,7 @@
   --moreLighterGreen: #ADBC9F;
   --whiteGreen: #FBFADA;
   --attColor: #e06303;
+  --greyGreen: #274639;
 }
 
 * {
@@ -13,5 +14,6 @@
 }
 
 body {
-  background-color: var(--moreLighterGreen);
+  /* has to bee --moreLighterGreen */
+  background-color: var(--whiteGreen);
 }

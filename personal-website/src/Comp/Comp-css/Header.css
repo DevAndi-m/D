@@ -16,10 +16,10 @@
 }
 
 .linkContainer {
-    width: 30%;
+    width: 50%;
     height: auto;
     margin: auto;
-    
+    gap: 20px;
     display: flex;
 
     justify-content: space-around;

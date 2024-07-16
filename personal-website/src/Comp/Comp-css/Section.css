@@ -82,8 +82,16 @@ p {
     color: var(--moreLighterGreen);
 }
 
+.headerLink {
+    text-decoration: none;
+}
+
 .links {
     transition: transform 0.3s ease, color 0.3s;
+}
+
+.links:link {
+    color: var(--moreLighterGreen);
 }
 
 .links:visited {

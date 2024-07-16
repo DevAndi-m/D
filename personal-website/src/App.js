@@ -1,18 +1,27 @@
 import './App.css';
-import Header from './Comp/Header';
-import Section from './Comp/Section';
-import SkillExpSection from './Comp/SkillExpSection';
-import CommentMain from './Comp/CommentMain'
-import Footer from './Comp/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import AboutMePage from './Pages/AboutMePage';
+import MyWorkPage from './Pages/MyWorkPage';
+import DocConPage from './Pages/DocConPage';
+import NoPage from './Pages/NoPage';
+import TestPage from './Pages/TestPage';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Section />
-      <SkillExpSection />
-      <CommentMain />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path='/home' element={<HomePage />} />
+          <Route path='/About' element={<AboutMePage />} />
+          <Route path='/Work&Projects' element={<MyWorkPage />} />
+          <Route path='/Documentation&ContactInfo' element={<DocConPage />} />
+          <Route path='/TestPage' element={<TestPage />}/>
+
+          <Route path='*' element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-//Hooki useReveal, e ki qet selektor edhe className. selektori esht classa invisible, edhe className esht klasa
+//Hooki useReveal, e ki selektor edhe className. selektori esht classa invisible, edhe className esht klasa
 //qe ka mu shfaq kur shifet n'ekran.
 
 const useReveal = (selector, className) => {

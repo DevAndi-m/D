@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import './Comp-css/Header.css';
 
@@ -58,10 +59,26 @@ function Header() {
   return (
     <div className='header'>
       <div className='linkContainer'>
-        <h3><a>Home</a></h3>
-        <h3><a>About Me</a></h3>
-        <h3><a>My Work</a></h3>
-        <h3><a>Gallery</a></h3>
+      <h3>
+          <Link to='/home' className='headerLink'>
+            <a>Home</a>
+          </Link>
+        </h3>
+        <h3>
+          <Link to='/about' className='headerLink'>
+            <a>About Me</a>
+          </Link>
+        </h3>
+        <h3>
+          <Link to='/work&projects' className='headerLink' >
+            <a>My Work</a>
+          </Link>
+        </h3>
+        <h3>
+          <Link to='/documentation&contactinfo' className='headerLink'>
+            <a>Documentation</a>
+          </Link>
+        </h3>
       </div>
 
       <div className={navVisible ? 'toggleOn' : 'toggleOff'}>
@@ -71,7 +88,7 @@ function Header() {
       <div className={navVisible ? 'hiddenLinkContainer' : 'visibleLinkContainer'}>
         <h3><a>About Me</a></h3>
         <h3><a>My Work</a></h3>
-        <h3><a>Gallery</a></h3>
+        <h3><a>Documentation</a></h3>
       </div>
 
       <p className='navDots' onClick={toggleNav} style={{ opacity: navVisible ? 1 : 0, width: navVisible ? 'fit-content' : 0 }}>{threeDots}</p>
