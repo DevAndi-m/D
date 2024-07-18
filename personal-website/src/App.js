@@ -6,6 +6,7 @@ import MyWorkPage from './Pages/MyWorkPage';
 import DocConPage from './Pages/DocConPage';
 import NoPage from './Pages/NoPage';
 import TestPage from './Pages/TestPage';
+import Header from './Comp/Header';
 
 function App() {
   return (

@@ -1,0 +1,18 @@
+.nextContainer {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.inTitle {
+    background: -webkit-linear-gradient(45deg,var(--greyGreen),var(--darkGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: transform 0.5s, opacity 0.5s ease-out;
+    text-align: center;
+}
+  
+.inTitle.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

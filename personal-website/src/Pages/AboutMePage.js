@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../Comp/Header';
+import InSection from '../Comp/AMsection-sub/InSection';
 
 function AboutMePage() {
   return (
     <div>
-        <Header />
-      <h3>About me page</h3>
+      <InSection />
     </div>
   )
 }
