@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Education() {
+function PeopleInsights() {
   return (
     <div>
       <h1 className='title'>Education</h1>
@@ -8,4 +8,4 @@ function Education() {
   )
 }
 
-export default Education
+export default PeopleInsights

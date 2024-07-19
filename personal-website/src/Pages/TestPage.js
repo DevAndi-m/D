@@ -61,9 +61,7 @@ function TestPage() {
           speed={1.2}
           factor={2}
           style={{
-            width: '100%',
-            height: '200vh',
-            backgroundColor: '#0b241b', 
+            
           }} 
         />
 

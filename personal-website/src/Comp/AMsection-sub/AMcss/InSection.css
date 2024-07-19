@@ -1,18 +1,74 @@
+:root {
+    --blackGreen: #040e0a;
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+    --altAttColor: #df7625;
+
+    --gradientBoxes: linear-gradient(-45deg, var(--moreLighterGreen), var(--whiteGreen));
+}
+
 .nextContainer {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: linear-gradient(180deg, var(--darkestGreen), var(--darkGreen));
+    width: '100%';
+    height: '200vh';
 }
 
 .inTitle {
     background: -webkit-linear-gradient(45deg,var(--greyGreen),var(--darkGreen));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transform: translateY(150px);
+    transform: translateY(250px);
+    transition-delay: 2s;
     transition: transform 0.5s, opacity 0.5s ease-out;
     text-align: center;
+    font-weight: bold;
+    text-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 6em;
 }
   
 .inTitle.visible {
-    opacity: 1;
     transform: translateY(0);
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+}
+
+.card h2 {
+    background: -webkit-linear-gradient(45deg,var(--moreLighterGreen),var(--whiteGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.insightsTxt {
+    width: 20%;
+    font-size: 25px;
+    margin-left: 15%;
+}
+
+.insightsImage {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.insightsImage img {
+    width: fit-content;
+    height: 30em;
+    margin-right: 15%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.insightsTitle {
+    text-align: center;
+    margin-top: 15%;
+    background: -webkit-linear-gradient(45deg,var(--moreLighterGreen),var(--whiteGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
