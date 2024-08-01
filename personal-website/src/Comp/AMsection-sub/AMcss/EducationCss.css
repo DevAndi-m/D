@@ -1,0 +1,41 @@
+:root {
+    --blackGreen: #040e0a;
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+    --altAttColor: #df7625;
+}
+
+.eduMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.eduTitle {
+    display: flex;
+    align-items: center; 
+    gap: 40px;
+    justify-content: center;
+}
+
+.eduTitle img {
+    width: 8em;
+    height: fit-content;
+}
+
+.eduTitle h2{
+    font-size: 2em;
+    color: var(--blackGreen);
+}
+
+.eduPara {
+    width: 60%;
+    margin: auto;
+    font-size: 25px;
+    text-align: center;
+}

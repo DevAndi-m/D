@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { BackpackIcon, PersonIcon, CommentIcon, PersonalInfoIcon } from './AboutIcons';
 import Header from '../Header';
-import Insights from './Insights'
-import profile from '../images/profilepic.png';
 import Footer from '../Footer';
 import imgOne from '../images/Adobe images/IMG_one.png';
 import imgTwo from '../images/Adobe images/IMG_two.png';
 import imgThree from '../images/Adobe images/IMG_three.png';
 import imgFour from '../images/Adobe images/IMG_four.png';
-import imgGroup from '../images/Adobe images/Full_image.png';
 import './AMcss/InSection.css';
-import PeopleInsights from './PeopleInsights';
+import Education from './Education';
 
 function InSection() {
+    const parallaxRef = useRef(null);
+    const iconsize = 25
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -20,18 +20,24 @@ function InSection() {
         }, 500);
     
         return () => clearTimeout(timer);
-      }, []);
+    }, []);
 
-      const alignCenter = { display: 'flex', alignItems: 'center' }
+    const scrollTo = (offset) => {
+    if (parallaxRef.current) {
+        parallaxRef.current.scrollTo(offset);
+    }
+    };
+    
     return (
     <div>
-        <Parallax pages={3.5}>
+        <Parallax pages={5.5} ref={parallaxRef}>
             <ParallaxLayer 
                 offset={.1}
                 speed={.2}>
                 <h1 className='inTitle'>From beautiful Prizren</h1>
             </ParallaxLayer>
             
+            {/* layer 1 */}
             <ParallaxLayer
                 speed={0.2}
                 config={{ tension: 0, friction: 0 }}
@@ -42,6 +48,8 @@ function InSection() {
                     backgroundRepeat: 'no-repeat'
                 }}
             />
+            
+            {/* layer 2 */}
             <ParallaxLayer
                 speed={0.6}
                 config={{ tension: 0, friction: 0 }}
@@ -52,6 +60,8 @@ function InSection() {
                     backgroundRepeat: 'no-repeat'
                 }}
             />
+
+            {/* layer 3 */}
             <ParallaxLayer
                 speed={1}
                 config={{ tension: 0, friction: 0 }}
@@ -62,14 +72,18 @@ function InSection() {
                     backgroundRepeat: 'no-repeat'
                 }}
             />
+
+            {/* support layer (Mush hapsiren) */}
             <ParallaxLayer 
                 className='supportLayer'
                 offset={.999}
                 factor={5}
                 speed={1}
             />  
+            
+            {/* layer 4 */}
             <ParallaxLayer
-                offset={0.39}
+                offset={0.5}
                 config={{ tension: 0, friction: 0 }}
                 speed={1.4}
                 style={{
@@ -78,43 +92,59 @@ function InSection() {
                     backgroundPosition: 'center top',
                     backgroundRepeat: 'no-repeat'
                 }} 
-            />
+            />  
             {/* Last */}
             <ParallaxLayer 
                 className='nextContainer'
                 offset={.999}
-                factor={5}
+                factor={9}
                 speed={1}
-            >  
-            <div className='insightsBox'>
-                <img src={profile}></img>
-                <h2 className='insightsTitle'>Title</h2>
-            </div>
+            > 
             </ParallaxLayer>
 
             <ParallaxLayer 
-                offset={1.28}
-                config={{
-                    tension: 170,
-                    friction: 5,
-                    mass: 1
-                }}
-                speed={50}
-                style={{ ...alignCenter, justifyContent: 'flex-start' }}
-                sticky={{ start: 1.3, end: 1.70}}
-            > 
-            <div className='card insightsImage'>
-                <img src='https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8bmF0dXJhbHxlbnwwfHx8fDE3MjEzNTQ5OTR8MA&ixlib=rb-4.0.3'></img>
-            </div>
-
+                offset={2}
+            >
+                <Education />
             </ParallaxLayer>
 
-            <ParallaxLayer
-                offset={1}
-                speed={1.1}
+            <ParallaxLayer 
+                offset={1.1}
+                speed={0.01}
+                sticky={
+                    {
+                        start: 1.1,
+                        end: 4
+                    }
+                }
             >
-                <Insights />
-            </ParallaxLayer> 
+                <div className='jumpToNav'>
+                <button onClick={() => scrollTo(1.7)}>
+                    <div className='jtn edu'>
+                        <BackpackIcon size={iconsize} />
+                        <h2>Education</h2>
+                    </div>
+                </button>
+                    <button>
+                        <div className='jtn pers'>
+                            <PersonIcon size={iconsize}/>
+                            <h2>Personality</h2>
+                        </div>
+                    </button>
+                    <button>
+                        <div className='jtn com'>
+                            <CommentIcon size={iconsize}/>
+                            <h2>Insights</h2>
+                        </div>
+                    </button>
+                    <button>
+                        <div className='jtn pei'>
+                            <PersonalInfoIcon size={iconsize} />
+                            <h2>Personal Info</h2>
+                        </div>
+                    </button>
+                </div>
+            </ParallaxLayer>
 
             <ParallaxLayer
                 offset={0}
@@ -125,7 +155,7 @@ function InSection() {
             </ParallaxLayer>
 
             <ParallaxLayer
-                offset={3.1}
+                offset={5.1}
                 style={{ pointerEvents: 'auto' }}
                 config={{
                     tension: 0,
