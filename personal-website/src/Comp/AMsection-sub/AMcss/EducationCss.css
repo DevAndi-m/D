@@ -16,26 +16,88 @@
     gap: 20px;
 }
 
-.eduTitle {
+.eduTitleMain {
     display: flex;
     align-items: center; 
-    gap: 40px;
     justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
 }
 
-.eduTitle img {
+.eduTitleMain img {
     width: 8em;
     height: fit-content;
+}
+
+.eduTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .eduTitle h2{
     font-size: 2em;
     color: var(--blackGreen);
+    margin: 0;
 }
 
-.eduPara {
+.eduTitle p {
+    color: var(--lighterGreen);
+}
+
+.eduPara p{
     width: 60%;
     margin: auto;
     font-size: 25px;
     text-align: center;
+    color: var(--darkGreen);
+}
+
+.colInfo {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 30px;
+}
+
+.colInfo ul {
+    text-decoration: none;
+
+}
+
+.colInfo p {
+    color: var(--darkGreen);
+    font-size: 18px;
+}
+
+.secondaryEducation{
+    width: 60%;
+    margin: auto;
+
+}
+
+.sehr {
+    border: solid var(--moreLighterGreen) 1px;
+}
+
+.seTitle {
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.seTitle img {
+    margin-top: 10px;
+    width: 8em;
+}
+
+.settl h2 {
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.settl p {
+    margin-top: 0;
+    font-size: 18px;
 }
