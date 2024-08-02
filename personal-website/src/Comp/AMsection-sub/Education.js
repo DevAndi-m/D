@@ -37,6 +37,7 @@ function Education() {
                   <p>Shkenca Natyrore</p>
                 </div>
               </div>
+              <p className='seDuration'>September 2018 - June 2021</p>
           </div>
         </div>
     </div>

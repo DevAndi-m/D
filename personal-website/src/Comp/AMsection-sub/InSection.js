@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { BackpackIcon, PersonIcon, CommentIcon, PersonalInfoIcon } from './AboutIcons';
+import { BackpackIcon, PersonIcon, CommentIcon, PersonalInfoIcon, ScrollDown } from './AboutIcons';
 import Header from '../Header';
 import Footer from '../Footer';
 import imgOne from '../images/Adobe images/IMG_one.png';
@@ -9,6 +9,8 @@ import imgThree from '../images/Adobe images/IMG_three.png';
 import imgFour from '../images/Adobe images/IMG_four.png';
 import './AMcss/InSection.css';
 import Education from './Education';
+import PeopleInsights from './PeopleInsights';
+import Personality from './Personality';
 
 function InSection() {
     const parallaxRef = useRef(null);
@@ -109,6 +111,12 @@ function InSection() {
             </ParallaxLayer>
 
             <ParallaxLayer 
+                offset={3}
+            >
+                <Personality />
+            </ParallaxLayer>
+
+            <ParallaxLayer 
                 offset={1.1}
                 speed={0.01}
                 sticky={
@@ -119,16 +127,24 @@ function InSection() {
                 }
             >
                 <div className='jumpToNav'>
-                <button onClick={() => scrollTo(1.7)}>
-                    <div className='jtn edu'>
-                        <BackpackIcon size={iconsize} />
-                        <h2>Education</h2>
-                    </div>
-                </button>
-                    <button>
+                    <button onClick={() => scrollTo(1.8)}>
+                        <div className='jtn edu'>
+                            <BackpackIcon size={iconsize} />
+                            <h2>Education</h2>
+                        </div>
+                        <div className='scto'>
+                            <p className='sctoP'>Scroll to</p>
+                            <ScrollDown size={20}/>
+                        </div>
+                    </button>
+                    <button onClick={() => scrollTo(3)}>
                         <div className='jtn pers'>
                             <PersonIcon size={iconsize}/>
                             <h2>Personality</h2>
+                        </div>
+                        <div className='scto'>
+                            <p className='sctoP'>Scroll to</p>
+                            <ScrollDown size={20}/>
                         </div>
                     </button>
                     <button>
@@ -136,11 +152,19 @@ function InSection() {
                             <CommentIcon size={iconsize}/>
                             <h2>Insights</h2>
                         </div>
+                        <div className='scto'>
+                            <p className='sctoP'>Scroll to</p>
+                            <ScrollDown size={20}/>
+                        </div>
                     </button>
                     <button>
                         <div className='jtn pei'>
                             <PersonalInfoIcon size={iconsize} />
                             <h2>Personal Info</h2>
+                        </div>
+                        <div className='scto'>
+                            <p className='sctoP'>Scroll to</p>
+                            <ScrollDown size={20}/>
                         </div>
                     </button>
                 </div>
