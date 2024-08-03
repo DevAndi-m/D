@@ -22,6 +22,10 @@
     background-color: var(--greyGreen);
 }
 
+.jtnTtl {
+    text-align: center;
+}
+
 .jtn {
     display: flex;
     justify-content: space-around;
@@ -45,15 +49,20 @@
     font-size: 1em;
     border: none;
     background-color: transparent;
-    color: var(--moreLighterGreen);
+    color: var(--lighterGreen);
     border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     gap: 10px;
     position: relative;
+    padding: none;
 }
 
 .jumpToNav button:hover {
     transform: scale(1.05);
+}
+
+.sctoP {
+    color: var(--lighterGreen);
 }
 
 .scto {
@@ -183,4 +192,8 @@
         margin-top: 3em;
         font-size: 2em;
     }
+}
+
+.imgReel {
+    
 }

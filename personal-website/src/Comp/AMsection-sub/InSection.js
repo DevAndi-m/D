@@ -7,10 +7,11 @@ import imgOne from '../images/Adobe images/IMG_one.png';
 import imgTwo from '../images/Adobe images/IMG_two.png';
 import imgThree from '../images/Adobe images/IMG_three.png';
 import imgFour from '../images/Adobe images/IMG_four.png';
+import imgReel from '../images/imgReel.png';
 import './AMcss/InSection.css';
 import Education from './Education';
-import PeopleInsights from './PeopleInsights';
 import Personality from './Personality';
+import PeopleInsights from './PeopleInsights';
 
 function InSection() {
     const parallaxRef = useRef(null);
@@ -32,7 +33,7 @@ function InSection() {
     
     return (
     <div>
-        <Parallax pages={5.5} ref={parallaxRef}>
+        <Parallax pages={7.5} ref={parallaxRef}>
             <ParallaxLayer 
                 offset={.1}
                 speed={.2}>
@@ -99,35 +100,61 @@ function InSection() {
             <ParallaxLayer 
                 className='nextContainer'
                 offset={.999}
-                factor={9}
+                factor={15}
                 speed={1}
             > 
             </ParallaxLayer>
 
             <ParallaxLayer 
-                offset={2}
+                offset={1}
             >
                 <Education />
             </ParallaxLayer>
 
             <ParallaxLayer 
-                offset={3}
+                offset={2.3}
             >
                 <Personality />
             </ParallaxLayer>
 
             <ParallaxLayer 
-                offset={1.1}
+                speed={1}
+                offset={2.5}
+                style={{
+                    backgroundColor: 'rgb(10, 16, 13)',
+                    width: '18em', 
+                    height: '0',
+                    paddingBottom: '100%', 
+                    backgroundImage: `url(${imgReel})`,
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center', 
+                    backgroundRepeat: 'no-repeat', 
+                    position: 'absolute', 
+                    left: '80%', 
+                    top: '0',
+                    zIndex: 2, 
+                    boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset"
+                }}
+            />
+
+            <ParallaxLayer
+                offset={4}
+            >
+                <PeopleInsights />
+            </ParallaxLayer>
+
+            <ParallaxLayer 
+                offset={1}
                 speed={0.01}
                 sticky={
                     {
-                        start: 1.1,
+                        start: 1,
                         end: 4
                     }
                 }
             >
                 <div className='jumpToNav'>
-                    <button onClick={() => scrollTo(1.8)}>
+                    <button onClick={() => scrollTo(1)}>
                         <div className='jtn edu'>
                             <BackpackIcon size={iconsize} />
                             <h2>Education</h2>
@@ -137,7 +164,7 @@ function InSection() {
                             <ScrollDown size={20}/>
                         </div>
                     </button>
-                    <button onClick={() => scrollTo(3)}>
+                    <button onClick={() => scrollTo(2.3)}>
                         <div className='jtn pers'>
                             <PersonIcon size={iconsize}/>
                             <h2>Personality</h2>
@@ -147,7 +174,7 @@ function InSection() {
                             <ScrollDown size={20}/>
                         </div>
                     </button>
-                    <button>
+                    <button onClick={() => scrollTo(3.8)}>
                         <div className='jtn com'>
                             <CommentIcon size={iconsize}/>
                             <h2>Insights</h2>
@@ -179,7 +206,7 @@ function InSection() {
             </ParallaxLayer>
 
             <ParallaxLayer
-                offset={5.1}
+                offset={7.1}
                 style={{ pointerEvents: 'auto' }}
                 config={{
                     tension: 0,

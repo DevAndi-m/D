@@ -6,6 +6,7 @@ import './AMcss/EducationCss.css';
 function Education() {
   return (
     <div className='eduMain'>
+      <h1 className='jtnTtl'>Education</h1>
         <div className='eduTitleMain'>
             <img src={ubtLogo}></img>
             <div className='eduTitle'>

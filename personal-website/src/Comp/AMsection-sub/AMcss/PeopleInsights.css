@@ -1,0 +1,63 @@
+:root {
+    --blackGreen: #040e0a;
+    --darkestGreen: #0b241b;
+    --darkGreen: #12372A;
+    --lighterGreen: #436850;
+    --moreLighterGreen: #ADBC9F;
+    --whiteGreen: #FBFADA;
+    --attColor: #e06303;
+    --altAttColor: #df7625;
+}
+
+.cardMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px   ;
+}
+
+.rpd {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+}
+
+.rpdImg {
+    width: 14em;
+    height: 14em; /* Set the height to create a square container */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.rpd p {
+    font-size: 2em;
+    color: var(--darkGreen);
+}
+
+.piName {
+    font-size: 4em;
+    text-align: center;
+    color: var(--darkGreen);
+}
+
+.cardMain hr {
+    border: 1px solid var(--darkGreen);
+    width: 60%;
+}
+
+.piDescription {
+    text-align: center;
+    font-size: 22px;
+    margin: auto;
+    width: 60%;
+    color: var(--darkGreen);
+}
+
+.starHolder {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}

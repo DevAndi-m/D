@@ -10,9 +10,10 @@
 }
 
 .persoMain {
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(45deg, var(--darkGreen), var(--darkGreen) 50%, var(--darkestGreen));
+    height: 130vh;
+    background-image: linear-gradient(45deg, var(--blackGreen), var(--darkestGreen) 50%, var(--darkGreen));
 }
 
 .persoMainContent {
@@ -20,6 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
 }
 
 .imgSigHolder {
@@ -27,7 +29,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    margin-top: 3em;
 }
 
 .profilePictureHolder {
@@ -51,5 +53,22 @@
 }
 
 .signature {
-    width: 25em;
+    width: 20em;
+    position: relative;
+    top: -150px;
+    left: 80px;
+}
+
+.p1 {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    top: -7em;
+}
+
+.p1 p {
+    font-size: 18px;
+    width: 20em;
+    text-align: justify;
 }
