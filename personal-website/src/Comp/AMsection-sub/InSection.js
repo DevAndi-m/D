@@ -178,10 +178,10 @@ function InSection() {
                             <ScrollDown size={20}/>
                         </div>
                     </button>
-                    <button onClick={() => scrollTo(3.85)}>
+                    <button onClick={() => scrollTo(4)}>
                         <div className='jtn com'>
                             <CommentIcon size={iconsize}/>
-                            <h2>Insights</h2>
+                            <h2>Insight</h2>
                         </div>
                         <div className='scto'>
                             <p className='sctoP'>Scroll to</p>

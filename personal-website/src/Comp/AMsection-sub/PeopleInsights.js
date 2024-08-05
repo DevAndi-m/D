@@ -19,6 +19,7 @@ function PeopleInsights() {
 
   return (
     <div className='cardMain'>
+      <h1 className='jtnTtl'>An Insight from:</h1>
       <div className='rpd'>
         <p>Relation: Friend</p>
           <img className="rpdImg" src={smiler}></img>
