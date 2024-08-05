@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import useScreenWidth from '../MyHooks/useScreenWidth';
 import './AMcss/PeopleInsights.css';
 import smiler from '../images/smiling-man_1098-15443.jpg';
 import { StarIcon } from './AboutIcons';
 
 function PeopleInsights() {
 
-  const starSize = 30
+// JS to get screen widhtn and resize starSize as responsiveness 
+  const screenWidth = useScreenWidth();
+
+  const [starSize, setStarSize] = useState(30)
+
+  useEffect(() => {
+    if (screenWidth < 490) {
+      setStarSize(15)
+    }
+  }, []);
 
   return (
     <div className='cardMain'>

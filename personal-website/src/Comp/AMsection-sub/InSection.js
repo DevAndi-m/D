@@ -12,6 +12,7 @@ import './AMcss/InSection.css';
 import Education from './Education';
 import Personality from './Personality';
 import PeopleInsights from './PeopleInsights';
+import GoToHeaderBtn from './GoToHeaderBtn';
 
 function InSection() {
     const parallaxRef = useRef(null);
@@ -33,7 +34,7 @@ function InSection() {
     
     return (
     <div>
-        <Parallax pages={7.5} ref={parallaxRef}>
+        <Parallax pages={6} ref={parallaxRef}>
             <ParallaxLayer 
                 offset={.1}
                 speed={.2}>
@@ -105,18 +106,21 @@ function InSection() {
             > 
             </ParallaxLayer>
 
+            {/* Education Layer */}
             <ParallaxLayer 
                 offset={1}
             >
                 <Education />
             </ParallaxLayer>
 
+            {/* Personality Layer */}
             <ParallaxLayer 
                 offset={2.3}
             >
                 <Personality />
             </ParallaxLayer>
 
+            {/* Image reel Layer */}
             <ParallaxLayer 
                 speed={1}
                 offset={2.5}
@@ -174,7 +178,7 @@ function InSection() {
                             <ScrollDown size={20}/>
                         </div>
                     </button>
-                    <button onClick={() => scrollTo(3.8)}>
+                    <button onClick={() => scrollTo(3.85)}>
                         <div className='jtn com'>
                             <CommentIcon size={iconsize}/>
                             <h2>Insights</h2>
@@ -184,7 +188,7 @@ function InSection() {
                             <ScrollDown size={20}/>
                         </div>
                     </button>
-                    <button>
+                    {/* <button>
                         <div className='jtn pei'>
                             <PersonalInfoIcon size={iconsize} />
                             <h2>Personal Info</h2>
@@ -193,8 +197,15 @@ function InSection() {
                             <p className='sctoP'>Scroll to</p>
                             <ScrollDown size={20}/>
                         </div>
-                    </button>
+                    </button> */}
                 </div>
+            </ParallaxLayer>
+
+            <ParallaxLayer
+                offset={5.5}
+                speed={5}
+            >
+                <GoToHeaderBtn scrollTo={scrollTo}/>
             </ParallaxLayer>
 
             <ParallaxLayer
@@ -206,7 +217,7 @@ function InSection() {
             </ParallaxLayer>
 
             <ParallaxLayer
-                offset={7.1}
+                offset={5.6}
                 style={{ pointerEvents: 'auto' }}
                 config={{
                     tension: 0,
@@ -226,4 +237,5 @@ export default InSection
 
 // TASKS responsivenes
 
-// Education.js
+// Fix footer responsiveness
+// Fix personality resp 

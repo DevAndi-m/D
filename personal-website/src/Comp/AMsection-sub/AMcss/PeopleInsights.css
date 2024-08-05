@@ -25,8 +25,8 @@
 
 .rpdImg {
     width: 14em;
-    height: 14em; /* Set the height to create a square container */
-    border-radius: 50%; /* Make the image round */
+    height: 14em; 
+    border-radius: 50%; 
     object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
@@ -61,3 +61,122 @@
     justify-content: center;
     gap: 2px;
 }
+
+@media only screen and (max-width: 1600px) {
+    .rpd {
+        width: 60%;
+    }
+    .rpdImg {
+        width: 12em;
+        height: 12em; 
+    }
+    .rpd p {
+        font-size: 1.5em;
+    }
+    .piName {
+        font-size: 3em;
+    }
+    .cardMain hr {
+        width: 60%;
+    }
+    .piDescription {
+        font-size: 20px;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1430px) {
+    .rpdImg {
+        width: 10em;
+        height: 10em; 
+    }
+    .rpd p {
+        font-size: 1.3em;
+    }
+    .piName {
+        font-size: 2.8em;
+    }
+    .cardMain hr {
+        width: 55%;
+    }
+    .piDescription {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .rpd {
+        width: 70%;
+    }
+    .rpdImg {
+        width: 8em;
+        height: 8em; 
+    }
+    .piName {
+        font-size: 2.2em;
+    }
+    .piDescription {
+        font-size: 17px;
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 945px) {
+    .piDescription {
+        font-size: 15px;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 745px) {
+    .rpdImg {
+        width: 6em;
+        height: 6em; 
+    }
+    .rpd p {
+        font-size: 1em;
+    }
+    .piName {
+        font-size: 2em;
+    }
+    .cardMain hr {
+        width: 65%;
+    }
+    .piDescription {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .rpd {
+        width: 90%;
+    }
+    .rpdImg {
+        width: 7em;
+        height: 7em; 
+    }
+    .cardMain hr {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .piDescription {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .rpdImg {
+        width: 5em;
+        height: 5em; 
+    }
+    .rpd p {
+        font-size: 0.8em;
+    }
+    .piName {
+        font-size: 1.5em;
+    }
+}
+
+

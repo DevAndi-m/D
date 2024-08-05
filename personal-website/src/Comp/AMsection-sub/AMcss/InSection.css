@@ -36,14 +36,12 @@
 .jumpToNav {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding: 4vh;
     width: 18em;
     background: transparent;
 }
 
 .jumpToNav button {
-    width: 100%;
     display: flex;
     align-items: center;
     font-size: 1em;
@@ -80,7 +78,7 @@
 }
 
 .inTitle {
-    background: -webkit-linear-gradient(45deg, var(--greyGreen), var(--darkGreen));
+    background: -webkit-linear-gradient(45deg, var(--attColor), var(--lighterGreen));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: translateY(250px);
@@ -89,7 +87,7 @@
     text-align: center;
     font-weight: bold;
     text-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    font-size: 6em;
+    font-size: 5.6em;
 }
 
 .inTitle.visible {
@@ -138,6 +136,10 @@
     .card p {
         font-size: 18px;
     }
+
+    .jtn {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 1250px) {
@@ -148,6 +150,14 @@
     .card p {
         font-size: 16px;
     }
+
+    .jtn {
+        font-size: 12px;
+    }
+
+    .jumpToNav {
+        padding: 2vh;
+    }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -157,6 +167,15 @@
 
     .card p {
         font-size: 16px;
+    }
+
+    .jumpToNav {
+        padding: 4vh;
+        gap: 20px;
+    }
+
+    .jtn h2 {
+        display: none;
     }
 }
 
@@ -170,6 +189,11 @@
     .nextContainer {
         margin-top: 3em;
     }
+
+    .jumpToNav {
+        padding: 3vh;
+        gap: 15px;
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -180,6 +204,10 @@
 
     .nextContainer {
         margin-top: 3em;
+    }
+    
+    .jumpToNav {
+        display: none;
     }
 }
 
@@ -192,8 +220,4 @@
         margin-top: 3em;
         font-size: 2em;
     }
-}
-
-.imgReel {
-    
 }

@@ -17,6 +17,12 @@
     z-index: 1000;
 }
 
+.jtnTtl {
+    background: -webkit-linear-gradient(45deg, var(--lighterGreen), var(--darkestGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .eduTitleMain {
     display: flex;
     align-items: center; 
@@ -58,6 +64,7 @@
     display: flex;
     justify-content: space-around;
     margin: 0 30px;
+    align-items: center;
 }
 
 .colInfo ul {
@@ -65,7 +72,7 @@
 
 }
 
-.colInfo p {
+.colInfo p, .bgnEnd p {
     color: var(--darkGreen);
     font-size: 18px;
 }
@@ -108,4 +115,204 @@
     font-size: 15px;
     margin-top: 20px;
     color: var(--darkGreen);
+}
+
+@media only screen and (max-width: 1430px) {
+    .jtnTtl {
+        font-size: 4em;
+    }
+
+    .eduTitleMain {
+        font-size: 14px;
+    }
+    
+    .eduTitleMain img {
+        width: 7em;
+    }
+
+    .eduTitleMain p {
+        font-size: 13px;
+    }
+
+    .eduPara p{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .jtnTtl {
+        font-size: 3em;
+    }
+
+    .eduTitleMain {
+        font-size: 13px;
+    }
+    
+    .eduTitleMain img {
+        width: 6em;
+    }
+
+    .colInfo p {
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (max-width: 945px) {
+    .eduPara p{
+        font-size: 14px;
+    }
+
+    .colInfo p {
+        font-size: 12px;
+    }
+
+    /* secondary */
+
+    .seTitle img {
+        width: 6em;
+    }
+
+    .settl h2{
+        font-size: 20px;
+    }
+
+    .settl p{
+        font-size: 15px;
+    }
+    
+    .seDuration{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .eduTitleMain {
+        font-size: 10px;
+        gap: 15px;
+    }
+
+    .eduTitle p {
+        font-size: 11px;
+    }
+
+    .eduPara p{
+        font-size: 12px;
+    }
+
+    .colInfo p {
+        font-size: 12px;
+    }
+
+     /* secondary */
+
+    .settl h2{
+        font-size: 16px;
+    }
+
+    .settl p{
+        font-size: 13px;
+    }
+    
+    .seDuration{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .eduPara p{
+        font-size: 10px;
+        width: 70%;
+    }
+
+    .colInfo p {
+        font-size: 10px;
+    }
+
+    /* secondary */
+
+    .seTitle img {
+        width: 4em;
+    }
+
+    .settl h2{
+        font-size: 14px;
+    }
+
+    .settl p{
+        font-size: 12px;
+    }
+    
+    .seDuration{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .jtnTtl {
+        font-size: 2em;
+    }
+
+    .eduTitleMain {
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+    .eduTitle {
+        text-align: center;
+    }
+
+    .eduTitle p {
+        font-size: 9px;
+    }
+    
+    .eduTitleMain img {
+        width: 8em;
+    }
+
+    .colInfo p {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+
+    .eduPara p{
+        width: 80%;
+    }
+
+    .eduTitleMain {
+        font-size: 8px;
+    }
+
+    .colInfo p {
+        font-size: 7px;
+    }
+
+    /* secondary */
+
+    .seTitle {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .settl {
+        text-align: center;
+    }
+
+    .seTitle img {
+        width: 4em;
+    }
+
+    .settl h2{
+        font-size: 14px;
+    }
+
+    .settl p{
+        font-size: 12px;
+    }
+    
+    .seDuration{
+        font-size: 10px;
+    }
 }
