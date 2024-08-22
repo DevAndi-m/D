@@ -31,7 +31,73 @@ function InSection() {
         parallaxRef.current.scrollTo(offset);
     }
     };
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const updateScreenWidth = () => {
+          setScreenWidth(window.innerWidth);
+        };
     
+        updateScreenWidth();
+    
+        window.addEventListener('resize', updateScreenWidth);
+  
+        return () => {
+          window.removeEventListener('resize', updateScreenWidth);
+        };
+      }, []);
+
+    // reel variable
+    const [reelWidth, setRWidth] = useState('18em')
+    const [reelDisp, setRDisp] = useState('inline');
+
+    useEffect(() => {
+        if (screenWidth < 1660 && screenWidth >= 1540) {
+            setRWidth('16em')
+            setRDisp('inline')
+        } 
+        if (screenWidth < 1540 && screenWidth >= 1430) {
+            setRWidth('15em')
+            setRDisp('inline')
+        } 
+        if (screenWidth < 1430 && screenWidth >= 1300) {
+            setRWidth('13em')
+            setRDisp('inline')
+        }
+        if (screenWidth < 1300 && screenWidth >= 1200) {
+            setRWidth('12em')
+            setRDisp('inline')
+        }
+
+        if (screenWidth < 1200 && screenWidth >= 1000) {
+            setRWidth('11em')
+            setRDisp('inline')
+        }
+
+        if (screenWidth < 1000 && screenWidth >= 0) {
+            setRWidth('0')
+            setRDisp('none')
+        }
+
+        if(screenWidth > 1660) {
+            setRWidth('18em')
+            setRDisp('inline')
+        }
+    }, [screenWidth])
+
+
+    //footer offset 
+    const [footerOffset, setFooterOffset] = useState('0');
+
+    useEffect(() => {
+        if (screenWidth <= 750 && screenWidth > 0) {
+            setFooterOffset('-30em')
+        } else {
+            setFooterOffset('0')
+        }
+    }, [screenWidth])
+
     return (
     <div>
         <Parallax pages={6} ref={parallaxRef}>
@@ -102,9 +168,9 @@ function InSection() {
                 className='nextContainer'
                 offset={.999}
                 factor={15}
-                speed={1}
-            > 
-            </ParallaxLayer>
+                speed={1}   
+            /> 
+          
 
             {/* Education Layer */}
             <ParallaxLayer 
@@ -125,8 +191,9 @@ function InSection() {
                 speed={1}
                 offset={2.5}
                 style={{
+                    display: `${reelDisp}`,
                     backgroundColor: 'rgb(10, 16, 13)',
-                    width: '18em', 
+                    width: `${reelWidth}`, 
                     height: '0',
                     paddingBottom: '100%', 
                     backgroundImage: `url(${imgReel})`,
@@ -147,6 +214,8 @@ function InSection() {
                 <PeopleInsights />
             </ParallaxLayer>
 
+
+            {/* Scroll Buttons */}
             <ParallaxLayer 
                 offset={1}
                 speed={0.01}
@@ -208,6 +277,7 @@ function InSection() {
                 <GoToHeaderBtn scrollTo={scrollTo}/>
             </ParallaxLayer>
 
+            {/* Header */}
             <ParallaxLayer
                 offset={0}
                 speed={3}
@@ -216,9 +286,14 @@ function InSection() {
                 <Header />
             </ParallaxLayer>
 
+            {/* Footer */}
             <ParallaxLayer
                 offset={5.6}
-                style={{ pointerEvents: 'auto' }}
+                style={{ 
+                    pointerEvents: 'auto',
+                    position: 'relative',
+                    top: `${footerOffset}`,
+                }}
                 config={{
                     tension: 0,
                     friction: 5,

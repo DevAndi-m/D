@@ -72,3 +72,162 @@
     width: 20em;
     text-align: justify;
 }
+
+@media only screen and (max-width: 1430px) {
+    .persoMainContent {
+        position: relative;
+        top: 8em;        
+    }
+
+    .profilePictureHolder {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .signature {
+        width: 18em;
+    }
+
+    .p1 {
+        gap: 35px;
+        top: -7em;
+    }
+
+    .p1 p {
+        font-size: 16px;
+        width: 18em;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .persoMainContent {
+        position: relative;
+        top: 0em;        
+    }
+
+    .profilePictureHolder {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .signature {
+        width: 18em;
+    }
+
+    .p1 {
+        flex-direction: column;
+        margin: auto;
+      
+        gap: 35px;
+        top: -8em;
+    }
+
+    .p1 p {
+        font-size: 17px;
+        width: 24em;
+    }
+}
+
+@media only screen and (max-width: 945px) {
+    .persoMainContent {
+        position: relative;
+        top: 2em;        
+    }
+
+    .profilePictureHolder {
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .signature {
+        top: -7em;
+        width: 14em;
+    }
+
+    .p1 {
+        flex-direction: column;
+        margin: auto;
+      
+        gap: 35px;
+        top: -5em;
+    }
+
+    .p1 p {
+        font-size: 16px;
+        width: 23em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .persoMainContent {
+        position: relative;
+        top: 2em;        
+    }
+
+    .profilePictureHolder {
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .signature {
+        top: -7em;
+        width: 14em;
+    }
+
+    .p1 {
+        flex-direction: column;
+        margin: auto;
+      
+        gap: 35px;
+        top: -5em;
+    }
+
+    .p1 p {
+        font-size: 16px;
+        width: 23em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .persoMainContent {
+        width: 70%;
+        top: 6em;
+    }
+
+    .profilePictureHolder {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .signature {
+        top: -7em;
+        width: 12em;
+    }
+
+    .p1 p {
+        margin: auto;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .p1 p {
+        margin: auto;
+        font-size: 15px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .persoMainContent {
+        width: 70%;
+        top: 3em;
+    }
+
+    .p1 p {
+        margin: auto;
+        font-size: 14px;
+        width: 100%;
+    }
+}
